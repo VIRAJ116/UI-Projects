@@ -1,0 +1,54 @@
+.btn {
+  @apply flex 
+  justify-center 
+  relative 
+  ease-in-out 
+  border 
+  py-[6px] 
+  px-[12px] 
+  border-solid 
+  items-center 
+  font-fontbody 
+  text-center 
+  transition 
+  duration-300 
+  outline-none 
+  cursor-pointer 
+  shadow-none 
+  no-underline;
+
+  .icon-right-arrow {
+    @apply relative transition-all ease-in-out duration-300 left-0;
+  }
+  &:hover {
+    .icon-right-arrow {
+      @apply left-[10px];
+    }
+  }
+}
+
+.btn-primary {
+    @apply bg-primaryred text-white border-primaryred h-[40px] md:h-[50px];
+    &:hover {
+      @apply shadow-lg shadow-red-500/50;
+    }
+}
+
+.btn-secondary {
+    @apply bg-bayblue text-white border-bayblue;
+    &:hover {
+      @apply shadow-lg shadow-indigo-500/50;
+    }
+}
+
+.btn-small {
+  @apply max-w-[166px] w-full;
+}
+
+.btn-medium {
+  @apply max-w-[185px] w-full;
+}
+
+.btn-big {
+  @apply max-w-[275px] w-full;
+}

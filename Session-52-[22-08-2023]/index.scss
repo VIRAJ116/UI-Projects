@@ -1,0 +1,385 @@
+@import './assets/sass/common/variable';
+@import './assets/sass/common/mixin';
+@import './assets/sass/common/base';
+@import './assets/sass/common/fonts';
+
+
+.shopping-section {
+    padding-top: 30px;
+    .container {
+        .shopping-grid {
+            display: grid;
+            grid-gap: 30px;
+            grid-template-columns: 1fr;
+            @include mq(1300px) {
+                grid-template-columns: 2.061fr 1fr;
+            }
+            .shopping-cart {
+                h3 {
+                    margin-bottom: 30px;
+                }
+                table {
+                    width: 100%;
+                    border-collapse: collapse;
+                    border: 1px solid var(--gallery-white-color);
+                    thead {
+                        background-color: var(--gallery-white-color);
+                        display: none;
+                        @include mq(870px) {
+                            display: table-header-group;
+                        }
+                        tr {
+                            th {
+                                font-weight: 400;
+                                padding: 16px 0px;
+                                text-align: left;
+                                @include font-detail(16px, 19px);
+                                &:first-child {
+                                    padding-left: 30px;
+                                }
+                                &:last-child {
+                                    padding-right: 30px;
+                                }
+                            }
+                            .max-width {
+                                max-width: 408px;
+                            }
+                        }
+                    }
+                    tbody {
+                        position: relative;
+                        display: flex;
+                        flex-wrap: wrap;
+                        @include mq(870px) {
+                            display: table-row-group;
+                        }
+                        tr {
+                            position: relative;
+                            width: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            @include mq(870px) {
+                                display: table-row;
+                            }
+                            &::after {
+                                position: absolute;
+                                content: 'Save For Later';
+                                cursor: pointer;
+                                text-decoration: underline;
+                                color: var(--gimblet-color);
+                                right: 30px;
+                                bottom: 30px;
+                            }
+                            td {
+                                padding-top: 30px;
+                                padding-bottom: 30px;
+                                border-bottom: 1px solid var(--gallery-white-color);
+                                padding-left: 30px;
+                                @include mq(870px) {
+                                    padding-left: 0;
+                                }
+                                &::before {
+                                    content: attr(data-title);
+                                    display: block;
+                                    font-weight: 700;
+                                    padding-bottom: 20px;
+                                    font-size: 16px;
+                                    @include mq($device-sm) {
+                                        font-size: 20px;
+                                    }
+                                    @include mq(870px) {
+                                        content: none;
+                                    }
+                                }
+                            }
+                            .picture-td {
+                                position: relative;
+                                vertical-align: top;
+                                padding-left: 30px;
+                                padding-right: 20px;
+                                picture {
+                                    @include flexCenter();
+                                    height: 100px;
+                                    width: 100px;
+                                    border: 1px solid var(--gallery-white-color);
+                                    img {
+                                        max-width: 100%;
+                                        max-height: 100%;
+                                    }
+                                }
+                                &::after {
+                                    position: absolute;
+                                    width: 30px;
+                                    height: 3px;
+                                    z-index: 4;
+                                    bottom: -1px;
+                                    left: 0;
+                                    background-color: var(--white-color);
+                                    @include mq(870px) {
+                                        content: "";
+                                    }
+                                }
+                            }
+                            
+                            .product-detail {
+                                padding-top: 27px;
+                                padding-right: 35px;
+                                p {
+                                    margin-bottom: 16px;
+                                    @include mq(870px) {
+                                        max-width: 344px;
+                                    }
+                                }
+                            }
+                            
+                            .price-td {
+                                vertical-align: top;
+                                padding-right: 40px;
+                            }
+
+                            .qty-td {
+                                vertical-align: top;
+                                padding-right: 30px;
+                                .increment {
+                                    @include flexbox();
+                                    width: 120px;
+                                    border: 1px solid var(--gallery-white-color);
+                                    height: 32px;
+                                    @include mq($device-sm) {
+                                        height: 40px;
+                                    }
+                                    .minus {
+                                        cursor: pointer;
+                                        @include flexCenter();
+                                        width: 28px;
+                                        border-right: 1px solid var(--gallery-white-color);
+                                    }
+                                    .count {
+                                        @include flexCenter();
+                                        min-width: 58px;
+                                        font-weight: 700;
+                                        @include font-detail(18px, 30px);
+                                    }
+                                    .plus {
+                                        cursor: pointer;
+                                        @include flexCenter();
+                                        width: 28px;
+                                        border-left: 1px solid var(--gallery-white-color);
+                                    }
+                                }
+                            }
+                            .subtotal-td {
+                                vertical-align: top;
+                                padding-right: 26px;
+                            }
+                            .edit-td {
+                                vertical-align: top;
+                                text-align: left;
+                                padding-right: 30px;
+                                @include mq(870px) {
+                                    text-align: center;
+                                }
+                                i {
+                                    cursor: pointer;
+                                    font-size: 20px;
+                                    @include transition(0.5s, ease-in-out);
+                                    &:hover {
+                                        color: blue;
+                                    }
+                                }
+                                span {
+                                    margin-left: 15px;
+                                    cursor: pointer;
+                                    @include mq(870px) {
+                                        display: none;
+                                    }
+                                }
+                            }
+                            .remove-td {
+                                position: relative;
+                                vertical-align: top;
+                                padding-right: 30px;
+                                text-align: left;
+                                i {
+                                    cursor: pointer;
+                                    font-size: 20px;
+                                    @include transition(0.5s, ease-in-out);
+                                    &:hover {
+                                        color: blue;
+                                    }
+                                }
+                                span {
+                                    margin-left: 15px;
+                                    cursor: pointer;
+                                    @include mq(870px) {
+                                        display: none;
+                                    }
+                                }
+                                &::after {
+                                    position: absolute;
+                                    width: 30px;
+                                    height: 3px;
+                                    z-index: 4;
+                                    bottom: -1px;
+                                    right: 0;
+                                    background-color: var(--white-color);
+                                    @include mq(870px) {
+                                        content: "";
+                                    }
+                                }
+                            }
+                        }
+                        .bg-color {
+                            &::after {
+                                content: none;
+                            }
+                            .picture-td {
+                                position: relative;
+                                @include mq(870px) {
+                                    text-align: -webkit-center;
+                                }
+                                picture {
+                                    background-color: var(--white-color);
+                                    height: 60px;
+                                    width: 60px;
+                                }
+                                &::after {
+                                    position: absolute;
+                                    width: 30px;
+                                    left: 0;
+                                    top: 0;
+                                    bottom: -1px;
+                                    height: auto;
+                                    background-color: var(--white-color);
+                                    @include mq(870px) {
+                                        content: '';
+                                    }
+                                }
+                            }
+                            .product-detail {
+                                p {
+                                    margin-bottom: 0px;
+                                }
+                            }
+                            .edit-td {
+                                display: none;
+                                @include mq(870px) {
+                                    display: table-cell;
+                                }
+                            }
+                            .remove-td {
+                                position: relative;
+                                padding-top: 0;
+                                @include mq(870px) {
+                                    padding-top: 30px;
+                                }
+                                &::after {
+                                    position: absolute;
+                                    width: 30px;
+                                    right: 0;
+                                    top: 0;
+                                    bottom: -1px;
+                                    height: auto;
+                                    background-color: var(--white-color);
+                                    @include mq(870px) {
+                                        content: '';
+                                    }
+                                }
+                                i {
+                                    @include mq(870px) {
+                                        margin-left: -21px;
+                                    }
+                                }
+                            }
+                        }
+                        .delete {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            .summary {
+                h3 {
+                    margin-bottom: 30px;
+                }
+                .shipping {
+                    border: 1px solid var(--gallery-white-color);
+                    padding-top: 30px;
+                    padding-bottom: 30px;
+                    padding-left: 30px;
+                    padding-right: 30px;
+                    .shipping-heading {
+                        padding-bottom: 20px;
+                        flex-direction: column;
+                        @include mq($device-sm) {
+                            flex-direction: row;
+                        }
+                        h4 {
+                            margin-bottom: 10px;
+                            @include mq($device-sm) {
+                                padding-right: 20px;
+                                margin-bottom: 0;
+                            }
+                        }
+                        span {
+                            color: var(--gimblet-color);
+                            text-decoration: underline;
+                            font-weight: 500;
+                            @include font-detail(14px, 20px);
+                            @include mq($device-md) {
+                                @include font-detail(18px, 27px);
+                            }
+                        }
+                    }
+                    .quote {
+                        color: #5F665A;
+                        background-color: var(--gallery-white-color);
+                        padding: 20px;
+                        line-height: 24px;
+                        margin-bottom: 23px;
+                    }
+                    .totals {
+                        .total {
+                            flex-direction: column;
+                            span {
+                                margin-bottom: 10px;
+                                @include mq($device-sm) {
+                                    margin-bottom: 0;
+                                }
+                            }
+                            @include mq($device-sm) {
+                                flex-direction: row;
+                            }
+                        }
+                        .subtotal {
+                            span {
+                                line-height: 22px;
+                                @include mq($device-md) {
+                                    line-height: 32px;
+                                }
+                            }
+                        }
+                        .store {
+                            margin-bottom: 6px;
+                            span {
+                                line-height: 22px;
+                                @include mq($device-md) {
+                                    line-height: 32px;
+                                }
+                            }
+                        }
+                        .tax-total {
+                            span {
+                                font-weight: 700;
+                                @include font-detail(14px, 24px);
+                                @include mq($device-md) {
+                                    @include font-detail(18px, 36px);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,303 @@
+@import './assets/sass/common/variable';
+@import './assets/sass/common/mixin';
+@import './assets/sass/common/base';
+
+.book-video {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    .container {
+        .wrapper {
+            h3 {
+                margin-bottom: 23px;
+            }
+            .boxes {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 30px;
+                margin-bottom: 30px;
+                @include mq($device-sm) {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+                .time-box {
+                    position: relative;
+                    min-height: 92px;
+                    border: 1px solid var(--border-color-secondary);
+                    @include border-radius(var(--border-radius));
+                    align-items: flex-end;
+                    padding-bottom: 19px;
+                    label {
+                        cursor: pointer;
+                    }
+                    &::before {
+                        content: '';
+                        display: block  ;
+                        position: absolute;
+                        z-index: 0;
+                        top: 18px;
+                        left: 50%;
+                        @include border-radius(11px);
+                        height: 18px;
+                        width: 18px;
+                        border: 1px solid var(--black-color);
+                        background: transparent;
+                        @include mq($device-sm) {
+                            left: 46%;
+                        }
+                    }
+                    .check-input {
+                        position: absolute;
+                        display: inline-block;
+                        cursor: pointer;
+                        left: 109px;
+                        top: 18px;
+                        height: 18px;
+                        width: 18px;
+                        z-index: 3;
+                        opacity: 0;
+                        &:checked + label::before {
+                            content: '';
+                            display: block  ;
+                            position: absolute;
+                            z-index: 2;
+                            left: 50%;
+                            top: 18px;
+                            @include border-radius(11px);
+                            height: 18px;
+                            width: 18px;
+                            border: 1px solid var(--red-color);
+                            background: transparent linear-gradient(180deg, #FD35B5 0%, #FF1616 100%) 0% 0% no-repeat padding-box;
+                            @include mq($device-sm) {
+                                left: 46%;
+                            }
+                        }
+                        &:checked + label::after {
+                            position: absolute;
+                            left: 50.9%;
+                            top: 18px;
+                            font-family: "Font Awesome 5 Free"; 
+                            content: "\f00c";
+                            font-size: 12px;
+                            font-weight: 900; 
+                            z-index: 2;
+                            color: var(--white-color);
+                            @include mq($device-sm) {
+                                top: 16px;
+                                left: 47.5%;
+                            }
+                        }
+                    }
+                    @include mq($device-sm) {
+                        &:not(:last-child)::after {
+                            position: absolute;
+                            top: 50%;
+                            right: -30px;
+                            content: '';
+                            width: 30px;
+                            border-top: 1px dashed var(--border-color-secondary);
+                        }
+                    }
+                }
+                .booked {
+                    border: 1px solid var(--red-color);
+                }
+                .border-dash {
+                    border: 1px dashed var(--border-color-secondary);
+                }
+            }
+            .notification {
+                padding: 12px 20px;
+                background-color: var(--bg-color);
+                border: 1px solid var(--border-color);
+                @include border-radius(var(--border-radius));
+                margin-bottom: 10px;
+                @include mq($device-sm) {
+                    flex-direction: row;
+                    align-items: center;
+                }
+                .left-wrap {
+                    .video-icon {
+                        height: 30px;
+                        width: 30px;
+                        @include border-radius(var(--border-radius));
+                        border: 1px solid var(--black-color);
+                        @include flexCenter();
+                        margin-right: 20px;
+                        margin-bottom: 6px;
+                        @include mq($device-sm) {
+                            margin-bottom: 0;
+                        }
+                    }
+                    @include mq($device-sm) {
+                        flex-direction: row;
+                        align-items: center;
+                    }
+                }
+                .price {
+                    @include font-detail(18px, 24px);
+                    margin-top: 4px;
+                    @include mq($device-sm) {
+                        margin-top: 0;
+                    }
+                }
+            }
+            .video-duration {
+                @include border-radius(var(--border-radius));
+                padding: 16px 20px;
+                margin-bottom: 20px;
+                border: 1px solid var(--border-color);
+                .duration-title {
+                    margin-right: 118px;
+                }
+            }
+            .features {
+                margin-bottom: 20px;
+                .feature-title {
+                    margin-bottom: 11px;
+                }
+                .feature-list {
+                    padding: 15px 20px;
+                    @include border-radius(var(--border-radius));
+                    border: 1px solid var(--border-color);
+                    li {
+                        list-style: circle;
+                        margin-left: 20px;
+                        @include font-detail(18px, 30px);
+                    }
+                }
+            }
+            .date-time {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 30px;
+                @include mq(820px) {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+                .date-slot {
+                    span {
+                        margin-bottom: 12px;
+                    }
+                    .calender {
+                        height: 338px;
+                        margin-bottom: 26px;
+                        border: 1px solid #e9e9e9;
+                        border-radius: 10px;
+                        overflow: hidden;
+                    }
+                    .buttons {
+                        justify-content: center;
+                        column-gap: 35px;
+                        @include mq(820px) {
+                            justify-content: unset;
+                        }
+                        .btn-small {
+                            width: 40%;
+                            @include mq(375px) {
+                                width: 166px;
+                            }
+                        }
+                        .btn-medium {
+                            width: 40%;
+                            @include mq(375px) {
+                                width: 174px;
+                            }
+                        }
+                    }
+                }
+                .time-slot {
+                    .time-slot-head {
+                        margin-bottom: 12px;
+                    }
+                    .time-box-wrap {
+                        height: 338px;
+                        overflow-y: auto;
+                        margin-bottom: 26px;
+                        &::-webkit-scrollbar {
+                            display: none;
+                        }
+                        .time-box {
+                            position: relative;
+                            min-height: 54px;
+                            padding: 16px 51px;
+                            border: 1px dashed var(--border-color-secondary);
+                            @include border-radius(var(--border-radius));
+                            &:not(:last-child) {
+                                margin-bottom: 10px;
+                            }
+                            label {
+                                cursor: pointer;
+                            }
+                            &::before {
+                                content: '';
+                                display: block  ;
+                                position: absolute;
+                                z-index: 0;
+                                left: 20px;
+                                top: 18px;
+                                @include border-radius(11px);
+                                height: 18px;
+                                width: 18px;
+                                border: 1px solid var(--black-color);
+                                background: transparent;
+                            }
+                            .time-checkbox {
+                                position: absolute;
+                                display: inline-block;
+                                cursor: pointer;
+                                top: 18px;
+                                left: 20px;
+                                height: 18px;
+                                width: 18px;
+                                z-index: 3;
+                                opacity: 0;
+                                &:checked + label::before {
+                                    content: '';
+                                    display: block  ;
+                                    position: absolute;
+                                    z-index: 2;
+                                    left: 20px;
+                                    top: 18px;
+                                    @include border-radius(11px);
+                                    height: 18px;
+                                    width: 18px;
+                                    border: 1px solid var(--red-color);
+                                    background: transparent linear-gradient(180deg, #FD35B5 0%, #FF1616 100%) 0% 0% no-repeat padding-box;
+                                }
+                                &:checked + label::after {
+                                    position: absolute;
+                                    top: 17px;
+                                    left: 24px;
+                                    font-family: "Font Awesome 5 Free"; 
+                                    content: "\f00c";
+                                    font-size: 12px;
+                                    font-weight: 900; 
+                                    z-index: 2;
+                                    color: var(--white-color);
+                                }
+                            }
+                        }
+                        .selected {
+                            border: 1px solid transparent;
+                            background-color: var(--bg-color);
+                        }                        
+                    }
+                    .btn-big {
+                        color: var(--white-color);
+                        border-color: transparent;
+                        width: 100%;
+                        background: transparent linear-gradient(90deg, #FD35B5 0%, #FF1616 100%) 0% 0% no-repeat padding-box;
+                        &:hover {
+                            background: transparent linear-gradient(270deg, #FD35B5 0%, #FF1616 100%) 0% 0% no-repeat padding-box;
+                        }
+                        @include mq(820px) {
+                            width: 375px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.jsCalendar tbody td.jsCalendar-current {
+    background-color: var(--red-color) !important;
+}

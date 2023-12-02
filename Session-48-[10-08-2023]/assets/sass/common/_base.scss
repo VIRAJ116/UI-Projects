@@ -1,0 +1,178 @@
+@import './mixin';
+// reset css starts 
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    @include box(border-box);
+}
+
+html, body,
+header, main, footer,
+section, div,
+h1, h2, h3, h4, h5, h6, 
+p, span, ul, li
+img, figure,
+label, input,
+textarea,
+a, i{
+    margin:0;
+    padding:0;
+    font-size: 100%;
+}
+
+header, 
+main, footer,
+section, 
+div, figure, 
+nav{
+    display: block;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+img{
+    vertical-align: middle;
+    display: inline-block;
+    max-width: 100%;
+}
+
+ul{
+    list-style: none;
+}
+
+a {
+    @include font-detail(18px, 22px);
+    display: inline-block;
+    vertical-align: middle;
+    color: var(--cod-gray-color);
+    text-decoration: none;
+    outline: none;
+}
+
+span, i{
+    display: inline-block;
+}
+
+button {
+    border:none;
+    background-color: none;
+    cursor: pointer;
+    outline:none;
+}
+
+input:focus, select:focus{
+    outline:none;
+}
+// reset css ends
+
+h1 {
+    @include h1;
+    span {
+        @include h1;
+    }
+}
+
+h2 {
+    @include h2;
+}
+
+p{
+    margin: 0;
+    @include body-font;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+}
+
+span {
+    @include font-detail(18px, 22px);
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 800px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+body {
+    @include body-font;
+    color: var(--cod-gray-color);
+    margin: 0;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.d-flex {
+    @include flexbox();
+}
+
+.d-flex-col {
+    @include flexColumn;
+}
+
+.d-align-center {
+    @include align-item-center;
+}
+
+.d-just-center {
+    @include just-center;
+}
+
+.d-just-btwn {
+    @include space-between;
+}
+
+.btn {
+    @include button;
+    @include flexCenter();
+}
+
+.btn-primary {
+    @include btn-primary;
+}
+
+.btn-secondary {
+    @include btn-secondary;
+}
+
+.btn-small {
+    @include btn-small;
+}
+
+.btn-medium {
+    @include btn-medium;
+}
+
+.btn-big {
+    @include btn-big;
+}
+
+.regular {
+    font-weight: 400;
+}
+
+.semi-bold {
+    font-weight: 600;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.medium {
+    font-weight: 500;
+}
+
+.text-upper {
+    text-transform: uppercase
+}
+.red-color {
+    color: var(--red-color);
+}

@@ -1,0 +1,595 @@
+@import 'mixin';
+
+$normal-wht: #ffffff;
+$bluelagoon: #006F88;
+$tradewind: #52ACAA;
+$line-color: #EBEBEB;
+
+:root {
+    --normal-wht-: #{$normal-wht};
+    --bluelagoon-: #{$bluelagoon};
+    --tradewind-: #{$tradewind};
+    --line-color-: #{$line-color};
+}
+
+/* --------- Reset css Starts ------------ */
+
+html, body, ul, i, li, form, header, section, div, p, h5, h4, h2, h1, span, ol, button, img, picture {
+    margin: 0;
+    padding: 0;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+ul, ol, li {
+    list-style: none;
+}
+
+a {
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+    color: black;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/* ------------- Reset css ends -------------- */
+
+/* ---------------- common css starts --------------- */
+
+.bluelagoon {
+    color: var(--bluelagoon-);
+}
+
+.tradewind {
+    color: var(--tradewind-);
+}
+
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    @include box-sizing(border-box);
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1640px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+body {
+    color: #202020;
+    font-family: 'Nunito', sans-serif;
+    font-size: 17px;
+    line-height: 29px;
+    font-weight: 400;
+    margin: 0;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.btn {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 17px;
+    height: 55px;
+    width: 130px;
+    padding: 16px 43px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    line-height: 24px;
+    background-color: var(--bluelagoon-);
+    border-radius: 5px;
+    @include transition;
+    &:hover {
+        background-color: darkblue;
+        color: var(--normal-wht-);   
+    }
+}
+
+h4 {
+    font-size: 80px;
+    line-height: normal;
+}
+
+h2 {
+    font-size: 55px;
+    line-height: normal;
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+}
+
+h3 {
+    line-height: normal;
+    font-size: 50px;
+}
+
+h5 {
+    line-height: normal;
+    font-size: 36px;
+}
+
+a {
+    display: inline-block;
+    font-family: 'Nunito', sans-serif;
+    font-size: 17px;
+}
+
+h6 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    line-height: normal;
+    font-size: 17px;
+}
+
+p {
+    font-size: 17px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    line-height: normal;
+}
+
+span {
+    line-height: normal ;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.d-flex-col {
+    flex-direction: column;
+}
+
+.d-align-center {
+    align-items: center;
+}
+
+.d-just-center {
+    justify-content: center;
+}
+
+.d-just-btwn {
+    justify-content: space-between;
+}
+
+.dots {
+    span{
+        display: inline-block;
+        height: 14px;
+        width: 14px;
+        border-radius: 100%;
+        background-color: #8f8f8f;
+        margin: 0 5px;
+    }
+} 
+
+/* --------------- common css ends ------------------- */
+
+/* ---------------- custom css starts --------------------- */
+
+/* ----------------- header css starts --------------------- */
+
+header {
+    position: relative;
+    padding-bottom: 66px;
+    background: linear-gradient(to right, #006F88, #52ACAA);
+
+    &::before {
+        position: absolute;
+        content: '';
+        top: 132px;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: var(--normal-wht-);
+        opacity: 0.3;
+    }
+    &::after {
+        position: absolute;
+        top: 152px;
+        content: '';
+        background-image: url('../images/wave-header-shape.png');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        height: 104px;
+        width: 100%;
+        right: 0;
+    }
+
+    .navbar {
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        .header-logo {
+            picture {
+            max-width: 202px;
+            }
+        }
+
+        .header-right {
+            column-gap: 60px;
+        
+            > .nav-lists {
+                .angle {
+                    position: relative;
+                    line-height: 1;
+                    margin-right: 42px !important;
+                  
+                    a {
+                      display: flex;
+                      align-items: flex-end;
+                      i {
+                        margin-left: 6.59px;
+                      }
+                    }
+                
+                    &::after {
+                      content: "";
+                      position: absolute;
+                    }
+                }
+                > li {
+                    &:hover {
+                        .sub-menu {
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }
+                    &:not(:last-child) {
+                        margin-right: 60px;
+                    }
+                    > a {
+                        position: relative;
+                        padding-top: 30px;
+                        padding-bottom: 30px;
+                        line-height: 1;
+                        color: var(--normal-wht-);
+                        &:hover {
+                            &::after {
+                                position: absolute;
+                                content: url('../images/Path7.png');
+                                text-align: -webkit-center;
+                                top: 52px;
+                                right: 0;
+                                left: 0;
+                            }
+                        }
+                    }
+
+                    .sub-menu {
+                        position: absolute;
+                        padding: 20px 0;
+                        top: 74px;
+                        min-width: 220px;
+                        right: 0;
+                        background-color: #ffffff;
+                        z-index: 1;
+                        opacity: 0;
+                        box-shadow: 0px 10px 20px #00000029;
+                        visibility: hidden;
+                      
+                        &::after {
+                          content: "";
+                          position: absolute;
+                          top: -6px;
+                          right: 8px;
+                          width: 40px;
+                          height: 40px;
+                          transform: rotate(45deg);
+                          background-color: #ffffff;
+                        }
+                      
+                        a {
+                          color: black;
+                          pointer-events: none;
+                          font-size: 15px;
+                          font-weight: 700;
+                          line-height: 40px;
+                          padding-left: 20px;
+                          padding-right: 40px;
+                      
+                          &:hover {
+                            color: #006F88;
+                            font-weight: 700;
+                            font-size: 15px;
+                          }
+                        }
+                      
+                        li {
+                            &:hover {
+                                background-color: #F3F9F9;
+                                a {
+                                  color: #006F88;
+                                  font-weight: 700;
+                                  font-size: 15px;
+                                }
+                            }
+                        }
+                    }
+                }
+        
+                > .path {
+                    a {
+                        pointer-events: none;
+                        &::after {
+                            position: absolute;
+                            content: url('../images/Path7.png');
+                            text-align: -webkit-center;
+                            top: 52px;
+                            right: 0;
+                            left: 0;
+                        }
+                    }
+                }  
+            }
+        
+            .icon-lists {
+                a {
+                    max-width: 25px;
+        
+                    &:not(:last-child) {
+                        margin-right: 20px;
+                    }
+                }
+            }
+            .btn {
+                color: var(--normal-wht-);
+            }
+        }
+    }
+}
+
+/* ----------------- header css ends --------------------- */
+
+/* ------------ main css starts ---------------------- */
+
+/* ----------- page section css starts ----------------- */
+
+.page-section {
+    padding-top: 84px;
+    padding-bottom: 64px;
+
+    .container {
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: '';
+            top: 46px;
+            left: 20px;
+            right: 20px;
+            background: var(--line-color-);
+            height: 1px;
+        }
+
+        .page-lists {
+            .home-page {
+                a {
+                    font-weight: 400;
+                    color: var(--bluelagoon);
+                }
+            }
+            li {
+                a {
+                    position: relative;
+                    color: #666666;
+                    font-weight: 700;
+                    line-height: 33px;
+                
+                    &::after {
+                      content: '/';
+                      margin-left: 10px;
+                      margin-right: 10px;
+                    }
+                }
+                span {
+                    color: #666666;
+                    font-weight: 700;
+                    line-height: 33px;
+                }
+            }
+        }
+    }
+}
+
+/* ----------- page section css ends ----------------- */
+
+/* ------------- about section css starts ----------------- */
+
+.about-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding-bottom: 100px;
+
+    .about-content {
+        text-align: left;
+        width: 47%;
+        min-height: 650px;
+
+        p {
+            text-align: left;
+            line-height: 29px;
+
+            &:not(:last-child) {
+                padding-bottom: 27px;
+            }
+        }
+    }
+
+    h2 {
+        padding-bottom: 25px;
+    }
+
+    .about-section-right-img {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 46%;
+        height: 90vh;
+        min-height: 650px;
+    
+        &::after {
+            content: '';
+            background-image: url('../images/Union_8.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 87px;
+            width: 146px;
+            position: absolute;
+            z-index: 3;
+            bottom: -44px;
+            left: -68px;
+        }
+        .about-section__img {
+            position: relative;
+            object-fit: cover;
+            height: 100%;
+            border-top-left-radius: 250px;
+            width: 100%;
+        }
+    }
+}
+
+/* ------------- about section css ends ----------------- */
+
+/* ---------------- video section starts ------------------ */
+
+.video-section {
+    position: relative;
+    padding-top: 360px;
+    padding-bottom: 40px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        background-image: url('../images/Path_11838.png');
+        background-repeat: no-repeat;
+        height: 898px;
+        width: 100%;
+        background-size: cover;
+        bottom: 0;
+        z-index: -1;
+    }
+
+    .video {
+        position: relative;
+        border: 10px solid var(--normal-wht-);
+
+        iframe {
+            border: 0;
+            width: 1200px;
+            height: 600px;
+        }
+
+        .video-btn{
+            inset: 0;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        
+            > img {
+                background-color: #52ACAA;
+                height: 100px;
+                width: 100px;
+                border-radius: 50%;
+                object-fit: none;
+            }
+        }
+    }
+}
+
+/* ---------------- video section ends ------------------ */
+
+/* --------------- our technology css starts ------------------ */
+
+.our-technology {
+    padding-top: 187px;
+    background-image: url('../images/Path_11839.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    h2 {
+        position: relative;
+        line-height: 28px;
+        margin: 0 auto;
+        width: fit-content;
+        padding-bottom: 104px;
+
+        &::after {
+            position: absolute;
+            content: url('../images/Union_11.png');
+            transform: rotate(90deg);
+            left: 48%;
+            top: 34px;
+        }
+    }
+
+    .padding-bottom {
+        margin-bottom: 30px !important;
+    }
+
+    p {
+        text-align: center;
+        margin: 0 auto;
+        max-width: 1206px;
+    }
+
+    .technologies-row {
+        margin-top: 80px;
+        flex-wrap: wrap;
+        margin-bottom: 80px;
+
+        .tech-col {
+            width: 25%;
+
+            .tech-col-content {
+                padding-top: 25px;
+                text-transform: uppercase;
+                text-align: center;
+                font-size: 19px;
+                line-height: 33px;
+            }
+
+            .round-shape {
+                background-color: var(--normal-wht-);
+                width: 230px;
+                height: 230px;
+                box-shadow: 0px 0px 30px #c1c1c159;
+                border-radius: 50%;
+        
+                > picture {
+                    max-width: 97.38px;
+        
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* --------------- our technology css ends ------------------ */
+
+/* ------------ main css ends ---------------------- */
+
+/* ---------------- custom css ends --------------------- */

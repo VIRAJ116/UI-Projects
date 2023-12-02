@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/* Reset Css Starts */
+
+html, body, div, span, applet, object, iframe, blockquote, pre, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Reset Css Ends */
+
+/* Common Css starts */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1400px;
+    padding: 0 20px;
+}
+
+/* Common Css Ends */
+
+/* Custom Css Starts */
+
+header {
+    position: fixed;
+    background: transparent;
+    top: 0;
+    background-color: rgba(135, 206, 250, 0.8);
+    z-index: 9;
+    width: 100%;
+}
+
+.header-logo-text {
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 3;
+}
+
+.header-nav {
+    float: right;
+}
+
+.header-nav .nav-menu li {
+    float: left;
+    padding: 0 20px;
+}
+
+.header-nav .nav-menu li:last-child {
+    padding-right: 0;
+}
+
+.header-nav .nav-menu li a {
+    line-height: 4.5;
+}
+
+.header-nav .nav-menu li a:hover {
+    color: blue;
+}
+.header-nav .nav-menu li i:hover {
+    color: blue;
+}
+
+.header-nav .nav-menu li i {
+    line-height: 4.5;
+    cursor: pointer;
+}
+
+.text-section {
+    text-align: center;
+    background-color: lightskyblue;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0px 0px 0px 150px;
+    padding: 200px;
+    max-height: 600px;
+}
+
+.img1 {
+    position: relative;
+    transform: rotate(355deg);
+    filter: drop-shadow(10px 10px 10px rgb(2, 26, 2));
+}
+
+.img2{
+    position: absolute;
+    transform: rotate(355deg);
+    filter: drop-shadow(10px 10px 10px rgb(2, 26, 2));
+    top: 250px;
+    right: 140px;
+}
+
+.inner-text {
+    float: left;
+    width: 50%;
+}
+
+.inner-image {
+    display: inline-block;  
+    width: 50%;
+}
+
+.text-section h1 {
+    font-size: 50px;
+}
+
+.text-section p {
+    font-size: 20px;
+}
+
+.text-section h1,p {
+    padding-bottom: 15px;
+}
+
+.btn .btn1 {
+    cursor: pointer;
+    background: none;
+    padding: 10px;
+    margin-right: 5px;
+    color: white;
+    background-color: rgb(3, 33, 33);
+    border: 0px;
+    border-radius: 10px;
+}
+
+.btn1:hover {
+    background-color: #fff;
+    color: black;
+    border: 0;
+}
+
+.btn .btn2 {
+    cursor: pointer;
+    padding: 10px;
+    color: white;
+    border: 0px;
+    background-color: #1395a0;
+    border-radius: 10px;
+}
+
+.btn .btn2:hover {
+    background-color: #fff;
+    color: black;
+    border: 0;
+}
+
+.grid-section {
+    margin-top: 100px;
+    float: left;
+    width: 100%;
+}
+
+.box {
+    position: relative;
+    width: 33.33%;
+    padding: 10px;
+    float: left;
+}
+
+.box:hover .backface {
+    visibility: visible;
+}
+
+.box h2 {
+    padding: 10px 0;
+}
+
+.box img {
+    width: 100%;
+    opacity: 1;
+    width: 100%;
+}
+
+.backface {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    right: 30px;
+    bottom: 120px;
+    width: 390px;
+    opacity: 0.6;
+    background-color: white;
+    visibility: hidden;
+}
+
+.backface i {
+    position: absolute;
+    font-size: 54px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    text-align: center;
+}
+
+.image-content-section {
+    padding: 5px 0;
+}
+
+.image-content-section h2 {
+    font-size: 50px;
+    padding-bottom: 10px;
+}
+
+.image-content-section h2,
+.image-content-section p {
+    text-align: justify;
+}
+
+ .image-content-section .content-div {
+    float: left;
+    width: 50%;
+    text-align: justify;
+    padding: 50px 100px;
+}
+
+.image-content-section .image-div {
+    display: inline-block;
+    width: 50%;
+}
+
+.image-content-section .image-div img {
+    width: 100%;
+}
+
+.image-content-section:nth-child(even) {
+    background: rgb(237,218,183);
+    background: linear-gradient(90deg, rgba(237,218,183,1) 0%, rgba(237,218,183,1) 35%, rgba(237,218,183,1) 100%);
+}
+
+.image-content-section:nth-child(even) .content-div {
+    float: right;
+}
+
+footer {
+    background-color: black;
+    text-align: center;
+    color: white;
+    line-height: 3;
+    font-size: 14px;
+}
+
+/* Custom Css Ends */
+
+

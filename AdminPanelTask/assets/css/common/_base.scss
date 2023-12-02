@@ -1,0 +1,195 @@
+// reset css starts
+* {
+  margin: 0;
+  padding: 0;
+  @include box-sizing(border-box);
+}
+
+body {
+  @include font-family(var(--secondary-font));
+  @include font-size-weight(16px, 400);
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+html,
+body,
+header,
+main,
+footer,
+section,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+ul,
+li img,
+figure,
+label,
+input,
+textarea,
+a,
+i {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+}
+
+header,
+main,
+footer,
+section,
+div,
+figure,
+nav {
+  display: block;
+}
+
+img {
+  vertical-align: middle;
+  display: inline-block;
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  vertical-align: middle;
+  text-decoration: none;
+  color: var(--black);
+  outline: none;
+}
+
+span,
+i {
+  display: inline-block;
+}
+
+button {
+  border: none;
+  background-color: none;
+  cursor: pointer;
+  outline: none;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+}
+// reset css ends
+
+h1 {
+  font-size: 28px;
+
+  @include mq(576px) {
+    font-size: 30px;
+  }
+  @include mq(768px) {
+    font-size: 34px;
+  }
+  @include mq(992px) {
+    font-size: 36px;
+  }
+  @include mq(1200px) {
+    font-size: 40px;
+  }
+}
+
+h2 {
+  font-size: 24px;
+  @include mq(576px) {
+    font-size: 26px;
+  }
+  @include mq(768px) {
+    font-size: 28px;
+  }
+  @include mq(992px) {
+    font-size: 30px;
+  }
+  @include mq(1200px) {
+    font-size: 32px;
+  }
+}
+
+h5 {
+  font-size: 20px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  @include font-family(var(--secondary-font));
+  color: var(--bs-dark-color);
+}
+
+p {
+  margin: 0;
+  @include font-size-weight(1rem, 400);
+  color: var(--bs-dark-color);
+  letter-spacing: 0.07rem;
+  line-height: 1.55rem;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.d-flex {
+  @include flexbox;
+}
+
+.d-flex-col {
+  flex-direction: column;
+}
+
+.d-align-center {
+  align-items: center;
+}
+
+.d-just-end {
+  justify-content: end;
+}
+
+.d-just-center {
+  justify-content: center;
+}
+
+.d-just-sb {
+  justify-content: space-between;
+}
+
+.box-heading {
+  @include font-size-weight(18px, 700);
+  color: #777777;
+  letter-spacing: 1px;
+  background-color: var(--bg-box-head);
+}
+
+.dots {
+  text-align: center;
+  .dot {
+    font-size: 38px;
+    color: #8bc4ea;
+  }
+}
+

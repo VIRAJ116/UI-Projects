@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <script src="https://kit.fontawesome.com/97c281afd5.js" crossorigin="anonymous"></script>
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+  </head>
+  <body>
+    <div class="container">
+      <header class="header d-flex d-flex-col">
+        <button class="sidebar-btn" id="sidebar-btn">
+          <picture>
+            <img src="assets/images/sidebar-btn.png" alt="toggle-btn" id="nav-icon-image">
+          </picture> 
+        </button>
+        <ul class="header-list d-flex">
+          <li><a href="#">Activity</a></li>
+          <li class="dropdown-par noti-drop"><a class="d-flex" href="#">Notifications <sup>19</sup></a>
+            <ul class="dropdown-content">
+              <li><a href="#">Notification 1</a></li>
+              <li><a href="#">Notification 2</a></li>
+              <li><a href="#">Notification 3</a></li>
+              <li><a href="#">Notification 4</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="header-profile d-flex d-align-center">
+          <picture>
+            <img src="assets/images/user.png" alt="profile-pic">
+          </picture>
+          <div class="profile-info dropdown-par">
+            <span>Harold Crawford
+            <i class="fa-solid fa-caret-down"></i>
+            <ul class="dropdown-content">
+              <li><a href="#">Profile</a></li>
+              <li><a href="#">Settings</a></li>
+              <li><a href="#">LogOut</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <aside class="sidebar" id="sidebar">
+        <a class="side-logo" href="#">
+          <img src="assets/images/logo.png" alt="logo" >
+        </a>
+        <ul class="main-lists">
+          <li class="main-list"><a class="open-list" href="#">
+            <span class="icon-name-wrap"><i class="fa-solid fa-house"></i><span class="side-text">Dashboard</span></span><span class="side-num">16</span>
+            </a>
+            <ul class="sub-lists">
+              <li><a href="#">View site</a></li>
+              <li><a href="#">General settings</a></li>
+              <li><a href="#">Help</a></li>
+            </ul>
+          </li>
+          <li class="main-list"><a class="open-list" href="#"><span class="icon-name-wrap"><i class="fa-solid fa-envelope"></i><span class="side-text">Webmail Service</span></span><span class="side-num">95</span></a>
+            <ul class="sub-lists">
+              <li><a href="#">View site</a></li>
+              <li><a href="#">General settings</a></li>
+              <li><a href="#">Help</a></li>
+            </ul>
+          </li>
+          <li class="main-list"><a class="open-list" href="#"><span class="icon-name-wrap"><i class="fa-solid fa-cloud"></i><span class="side-text">Cloud Storage</span></span><span class="side-num">7</span></a>
+            <ul class="sub-lists">
+              <li><a href="#">View site</a></li>
+              <li><a href="#">General settings</a></li>
+              <li><a href="#">Help</a></li>
+            </ul>
+          </li>
+          <li class="main-list"><a class="open-list" href="#"><span class="icon-name-wrap"><i class="fa-brands fa-elementor"></i><span class="side-text">UI Elements</span></span><span class="side-num">7</span></a>
+            <ul class="sub-lists">
+              <li><a href="#">View site</a></li>
+              <li><a href="#">General settings</a></li>
+              <li><a href="#">Help</a></li>
+            </ul>
+          </li>
+          <li class="main-list"><a class="open-list" href="#"><span class="icon-name-wrap"><i class="fa-solid fa-chart-line"></i><span class="side-text">Statistics Charts</span></span><span class="side-num">6</span></a>
+            <ul class="sub-lists">
+              <li><a href="#">View site</a></li>
+              <li><a href="#">General settings</a></li>
+              <li><a href="#">Help</a></li>
+            </ul>
+          </li>
+          <li class="main-list"><a class="open-list" href="#"><span class="icon-name-wrap"><i class="fa-solid fa-clock"></i><span class="side-text">Freelance Time Manager</span></span><span class="side-num">24</span></a>
+            <ul class="sub-lists">
+              <li><a href="#">View site</a></li>
+              <li><a href="#">General settings</a></li>
+              <li><a href="#">Help</a></li>
+            </ul>
+          </li>
+        </ul>
+      </aside>
+      <main class="main">
+          <div class="first-row">
+              <a href="#" class="visitor visitor-one d-flex d-flex-col">
+                <picture>
+                  <img src="assets/images/visitor.png" alt="visitor">
+                </picture>
+                <span>Visitors info</span>
+              </a>
+              <a href="#" class="visitor visitor-two d-flex d-flex-col">
+                <picture>
+                  <img src="assets/images/upload.png" alt="upload">
+                </picture>
+                <span>Upload stuff</span>
+              </a>
+              <a href="#" class="visitor visitor-three d-flex d-flex-col">
+                <picture>
+                  <img src="assets/images/inbox.png" alt="inbox">
+                </picture>
+                <span>Webmail inbox</span>
+              </a>
+              <a href="#" class="visitor visitor-four d-flex d-flex-col">
+                <picture>
+                  <img src="assets/images/freelance.png" alt="freelance">
+                </picture>
+                <span>Freelance task</span>
+              </a>
+              <a href="#" class="visitor visitor-five d-flex d-flex-col">
+                <picture>
+                  <img src="assets/images/logout.png" alt="logout">
+                </picture>
+                <span>Logout account</span>
+              </a>
+          </div>
+          <div class="second-row">
+            <div class="quick-statistics d-flex d-flex-col">
+              <div class="statistics-heading box-heading d-flex d-align-center">
+                Quick Statistics
+              </div>
+              <div class="quick-statistics-image">
+                <picture>
+                  <img src="assets/images/chart-crop.png" alt="graph">
+                </picture>
+              </div>
+            </div>
+            <div class="cloud-storage d-flex d-flex-col">
+              <div class="cloud-content box-heading d-flex d-align-center">
+                Cloud storage usage
+              </div>
+              <div class="cloud-graph-image d-flex d-align-center">
+                <picture>
+                  <img src="assets/images/round-graph.png" alt="round">
+                </picture>
+              </div>
+              <div class="cloud-files d-flex d-align-center">
+                <a href="#">Show my files <i class="fa-solid fa-chevron-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="third-row">
+            <div class="todo-list">
+              <div class="add-todo-list d-flex d-align-center">
+                <span class="add-icon d-flex d-align-center">
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+                <span class="todo-heading box-heading">Todo list</span>
+              </div>
+              <div class="check-list-wrap">
+                <input type="search">
+                <div class="check-list">
+                  <span class="custom-checkbox">
+                    <input type="checkbox" id="listone" name="listone">
+                    <label for="listone">Aliquam metus neque</label>
+                  </span>
+                  <span class="custom-checkbox">
+                    <input type="checkbox" id="listtwo" name="listtwo">
+                    <label for="listtwo">In ut turpis non ipsum rhoncus porttitor</label>
+                  </span>
+                  <span class="custom-checkbox">
+                    <input type="checkbox" id="listthree" name="listthree">
+                    <label for="listthree">Maecenas interdum dignissim</label>
+                  </span>
+                  <span class="custom-checkbox">
+                    <input type="checkbox" id="listfour" name="listfour">
+                    <label for="listfour">Pallentesque sodales ipsum et enim</label>
+                  </span>
+                  <span class="custom-checkbox">
+                    <input type="checkbox" id="listfive" name="listfive">
+                    <label for="listfive">Quisque tincidunt mattis sapien</label>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="weather">
+              <picture>
+                <img src="assets/images/weather.jpg" alt="weather">
+              </picture>
+            </div>
+            <div class="quote d-flex d-flex-col">
+              <p>"Art is the only way to run away without leaving home."</p>
+              <span>-Twyla Tharp -</span>
+            </div>
+          </div>
+          <div class="fourth-row">
+            <div class="banner-profile">
+              <div class="banner-image-content">
+                <picture>
+                  <img src="assets/images/banner.jpg" alt="banner-image">
+                </picture>
+                <div class="banner-content d-flex d-flex-col">
+                  <span class="add-icon d-flex d-align-center">
+                    <i class="fa-solid fa-plus"></i>
+                  </span>
+                  <h5>Keith Gardner</h5>
+                  <p>Cras et  neque vel nunc aliquet dictum vitae eget velit. Maecenas lobortis leo eu odio viverra pulvinar.</p>
+                </div>
+              </div>
+              <div class="about-social">
+                <div class="banner-user-image">
+                  <picture>
+                    <img src="assets/images/profile.png" alt="profile-image">
+                  </picture>
+                </div>
+                <div class="social-row d-flex">
+                  <div class="social d-flex d-flex-col">
+                    <span>Followers</span>
+                    <span>9.882</span>
+                  </div>
+                  <div class="social d-flex d-flex-col">
+                    <span>Following</span>
+                    <span>1397</span>
+                  </div>
+                  <div class="social d-flex d-flex-col">
+                    <span>Notes</span>
+                    <span>17.200</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="quicknotes">
+              <div class="quick-heading">Quick notes</div>
+              <form action="#" class="d-flex d-flex-col">
+                <div>
+                  <input type="text" placeholder="Note title" class="note-title">
+                </div>
+                <div>
+                  <textarea class="notearea" placeholder="Your note here" name="notearea" id="notearea"></textarea>
+                </div>
+                <button type="submit">Submit</button>
+              </form>
+            </div>
+          </div>
+          <div class="dots">
+            <span class="dot">&#x2B22;</span>
+            <span class="dot">&#x2B22;</span>
+            <span class="dot">&#x2B22;</span>
+          </div>
+      </main>
+    </div>
+    <script src="assets/js/index.js"></script>
+  </body>
+</html>

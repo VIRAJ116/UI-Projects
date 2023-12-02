@@ -1,0 +1,193 @@
+*{
+    box-sizing: border-box;
+}
+
+/* reset css starts */
+html, body,
+header, main, footer,
+section, div,
+h1, h2, h3, h4, h5, h6, 
+p, span, ul, li
+img, figure,
+label, input,
+a{
+    margin:0;
+    padding:0;
+    font-size: 100%;
+}
+
+img{
+    vertical-align: middle;
+    display: inline-block;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    line-height: 16px;
+    vertical-align: middle;
+    text-decoration: none;
+    color:#000000;
+    display: inline-block;
+}
+span{
+    display: inline-block;
+}
+/* reset css ends */
+
+/* common css */
+body{
+    background-color: #ffffff;
+    color:#000000;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.container{
+    max-width: 1240px;
+    margin:0 auto;
+    padding:0 20px;
+}
+
+h2{
+    font-size: 40px;
+    line-height: 30px;
+    font-weight: 700;
+}
+
+h3{
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 700;
+}
+
+.rect-circle-box {
+    padding-top:50px;
+    padding-bottom: 50px;
+}
+
+.rect-circle-box h2{
+    padding-bottom:60px;
+}
+
+.square {
+    background-color: #ffda00;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 200px;
+}
+
+.square::before {
+    content: "";
+    position: absolute;
+    left: -83px;
+    width: 120%;
+    height: 62%;
+    border-top-left-radius: 142px;
+    border-top-right-radius: 142px;
+    border: 3px solid black;
+    border-bottom-color: transparent;
+    transform: rotate(-90deg);
+    z-index: -1;
+}
+
+.square::after {
+    content: "";
+    position: absolute;
+    left: 37px;
+    width: 120%;
+    height: 62%;
+    border-top-left-radius: 142px;
+    border-top-right-radius: 142px;
+    border: 3px solid black;
+    border-bottom-color: transparent;
+    transform: rotate(90deg);
+}
+  
+
+/* .square::before{
+    content: '';
+    display: block;
+    position: absolute;
+    height: 120%;
+    width: 120%;
+    top: -22px;
+    bottom: 0;
+    left: -18px;
+    right: 0;
+    z-index: 1;
+    box-shadow: 0 0 0 3px #000000;
+    border-radius: 100%;
+    clip-path: inset(0px 0px 0px 114px);
+}
+.square::after{
+    content: '';
+    display: block;
+    position: absolute;
+    height: 120%;
+    width: 120%;
+    top: -22px;
+    bottom: 0;
+    left: -18px;
+    right: 0;
+    z-index: -2;
+    box-shadow: 0 0 0 3px #000000;
+    border-radius: 100%;
+} */
+
+.inner-square {
+    background-color: #bdbdbd;
+    height: 150px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* box one design css */
+
+
+.square-two {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    width: 250px;
+    border: 3px solid black;
+    z-index: 10;
+    border-radius: 100%;
+    /* transform: rotate(45deg); */
+}
+
+.non-rotate::after {
+    transform: rotate(0deg) !important;
+}
+
+.square-two::after {
+    content: '';
+    position: absolute;
+    transform: rotate(45deg);
+    background-color: #ffda00;
+    height: 200px;
+    width: 200px;
+}
+
+.inner-square-two {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 3;
+    background-color:#bdbdbd;
+    height: 140px;
+    width: 140px;
+    text-align: center;
+}

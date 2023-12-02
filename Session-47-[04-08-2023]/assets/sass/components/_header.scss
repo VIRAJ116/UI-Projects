@@ -1,0 +1,106 @@
+header {
+    background-color: var(--white-color);
+    z-index: 999;
+    position: fixed;
+    height: 160px;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0px 0px 10px #00000029;
+    .container {
+        height: 100%;
+        .header-wrapper {
+            height: 100%;
+            .header-logo {
+                img {
+                    width: 206px;
+                }
+            }
+            .nav-lists {
+                display: none;
+                padding-right: 20px;
+                @include mq($tablet) {
+                    display: flex;
+                }
+                li {
+                    &:not(:last-child) {
+                        margin-right: 80px;
+                    }
+                    a {
+                        text-transform: uppercase;
+                        font-weight: 600;
+                        @include transition(0.3s);
+                        &:hover {
+                            color: var(--red-color);
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+
+            .header-right {
+                display: none;
+                @include mq(1400px) {
+                    display: flex;
+                }
+                >.btn {
+                    margin-right: 30px;
+                }
+                .btn-wrapper {
+                    > span {
+                        text-transform: uppercase;
+                        font-weight: 600;
+                        margin-right: 20px;
+                    }
+                    .btn-inner {
+                        a {
+                            &:first-child {
+                                margin-right: 30px;
+                            }
+                            i {
+                                font-size: 20px;
+                                margin-right: 5px;
+                            }
+                            .fa-apple {
+                                font-size: 22px;
+                            }
+                        }
+                        .btn-transparent {
+                            &:hover {
+                                background-color: var(--black-color);
+                                color: var(--white-color);
+                                border: 1px solid black;
+                            }
+                        }
+                    }
+                }
+            }
+            .hamburger {
+                height: 50px;
+                @include mq($tablet) {
+                    display: none;
+                }
+                &:hover {
+                    background-color: var(--red-color);
+                    color: white;
+                }
+                i {
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+}
+
+.header-top {
+    height: 90px;
+    .container {
+        .header-wrapper {
+            .header-logo {
+                img {
+                    width: 160px;
+                }
+            }
+        }
+    }
+}

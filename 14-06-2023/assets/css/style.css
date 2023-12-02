@@ -1,0 +1,124 @@
+/* ---------------- reset css starts ------------------ */
+
+html, body, ul, i, li, form, header, section, div, p, h5, h4, h2, h1, span, ol, button, img, picture {
+    margin: 0;
+    padding: 0;
+}
+
+ul, ol, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* ------------------- reset css ends ----------------  */
+
+/* common css starts */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 940px;
+}
+
+body {
+    color: black;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.clearfix::before,
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+h1, p , h2, h3, h5, li {
+    line-height: 1;
+}
+
+/* ------------- common css ends ----------------- */
+
+.counter-section {
+    min-height: 100vh;
+    text-align: justify; 
+    color: white;
+    counter-reset: my-sec-counter;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.main-lists {
+    width: 100%;
+    padding: 10px 80px;
+    counter-reset: section;
+}
+
+.sub-lists {
+    position: relative;
+    counter-reset: subsection;
+    padding-top: 10px;
+}
+
+.main-lists > li,
+.sub-lists > li {
+    position: relative;
+}
+
+.main-lists > li::before {
+    font-size: 20px;
+    margin-right: 10px;
+    border-radius: 100%;
+    padding: 4px 4px 4px 10px;
+    border: 2px solid gray
+}
+
+.main-lists li > p {
+    position: relative;
+    padding-left: 44px;
+    padding-top: 5px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.main-lists > li {
+    margin: 30px 0;
+    font-size: 20px;
+}
+
+.sub-lists li {
+    margin: 20px 0;
+    padding: 0 0 0 50px;
+}
+
+.main-lists li::before {
+    counter-increment: section;
+    content: counter(section) " ";
+}
+
+.sub-lists li::before {
+    counter-increment: subsection;
+    content: counters(section, ".") "." counter(subsection) " ";
+}
+
+.main-lists li:not(:last-child)::after {
+    position: absolute;
+    top: 25px;
+    content: '';
+    left: 16px;
+    width: 3px;
+    height: 100%;
+    background-color: gray;
+}
+
+.sub-lists > li::before {
+    margin-right: 5px;
+}

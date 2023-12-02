@@ -1,0 +1,30 @@
+@import './sass/common/variable';
+@import './sass/common/mixin';
+@import './sass/common/base';
+
+.container {
+    @include flexCenter();
+    .wrapper {
+        width: 100%;
+        margin-top: 50px;
+        margin-bottom: 20px;
+        .text {
+            height: 55px;
+            width: 100%;
+            padding: 10px 15px;
+        }
+    }
+    button {
+        margin: 0 auto;
+        margin-bottom: 10px;
+        width: 200px;
+    }
+    #btn-two {
+        &:hover {
+            border-color: black;
+        }
+    }
+    p {
+        width: 100%;
+    }
+}

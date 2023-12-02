@@ -1,0 +1,55 @@
+.contact-us {
+    padding-top: 56px;
+    padding-bottom: 56px;
+    background-color: var(--cod-gray-color);
+    .container {
+        .contact-wrapper {
+            flex-wrap: wrap;
+            .locate-us {
+                width: 100%;
+                margin-bottom: 50px;
+                @include mq($device-md) {
+                    width: 48.5%;
+                    margin-bottom: 0;
+                }
+                .locate-img {
+                    background-color: var(--red-color);
+                    height: 176px;
+                    width: 176px;
+                    border-radius: 100%;
+                    border: 15px solid var(--light-color);
+                    margin-bottom: 28px;
+                    picture {
+                        max-width: 85px;
+                    }
+                }
+                .locate-content {
+                    span {
+                        @include font-xs;
+                        color: var(--white-color);
+                    }
+                }
+            }
+            .helpline {
+                width: 100%;
+                @include mq($device-md) {
+                    width: 48.5%;
+                }
+                .helpline-img {
+                    background-color: var(--red-color);
+                    height: 176px;
+                    width: 176px;
+                    border-radius: 100%;
+                    border: 15px solid var(--light-color);
+                    margin-bottom: 28px;    
+                }
+                .help-content {
+                    span {
+                        @include font-xs;
+                        color: var(--white-color);
+                    }
+                }
+            }
+        }
+    }
+}

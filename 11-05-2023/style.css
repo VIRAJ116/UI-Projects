@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background-color: antiquewhite; */
+    font-family: "Poppins", sans-serif;
+}
+
+.navbar {
+    /* display: inline-block; */
+    float: left;
+    position: sticky;
+    /* top: 10%; */
+    width: 100%;
+    background-color: rgb(212, 161, 232);
+}
+
+.logo {
+    float: left;
+}
+
+.navlist {
+    float: right;
+    padding-top: 40px;
+}
+
+.navlist-ul li a {
+    /* background-color: lightpink; */
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 0 10px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.navlist-ul li a:hover {
+    box-shadow: 0 0 5px #400e4a, 0 0 30px #774191, 0 0 30px #73407d;
+    transition: 0 all ease;
+    color: lightpink;
+    background: white;
+}
+
+.navlist-ul li {
+    display: inline;
+}
+
+main {
+    background-color: antiquewhite;
+}
+
+.center {
+    text-align: center;
+}
+
+.title-section {
+    display: block;
+    float: left;
+    width: 100%;
+}
+
+.title {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    background-color: lightpink;
+}
+
+.section {
+    /* margin-top: 20px; */
+    float: left;
+    width: 100%;
+    text-align:center;
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #cc00ff, 0 0 30px #e100ff;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.titlepar {
+    margin: 12px auto;
+    font-size: 15px;
+    text-align: center;
+    width: 50%;
+}
+
+.orange {
+    display: block;
+    float: left;
+    width: 100%;
+    background-color: orange;
+    color: white;
+}
+
+.box {
+    display: block;
+    float: left;
+    margin: 10px 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+    height: auto;
+    width: calc(33.33% - 23px);
+}
+
+.box_image {
+    width: 80%;
+}
+
+.picture {
+    display: block;
+    float: left;
+    width: 100%;
+    height: auto;
+}
+
+.article {
+    /* font-family: Arial, sans-serif; */
+    /* display: block; */
+    float: left;
+    line-height: 1.6;
+    padding: 20px;
+    margin: 10px 0;
+    background-color: #f8f8f8;
+    border: 2px solid #695858;
+    border-radius: 5px;
+}
+
+.footers {
+    float: left;
+    width: 100%;
+    background-color: black;
+    color: white;
+}

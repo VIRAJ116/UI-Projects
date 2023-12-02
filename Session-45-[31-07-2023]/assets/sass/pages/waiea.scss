@@ -1,0 +1,273 @@
+@import '../common/variable';
+@import '../common/base';
+@import '../common/mixin';
+@import '../components/header';
+@import '../components/breadcrumb';
+@import '../components/footer';
+
+.about-section {
+    position: relative;
+    @include flexCenter();
+    height: 100%;
+    padding-bottom: 60px;
+
+    @include mq($tablet) {
+        height: 100vh;
+        padding-bottom: 100px;
+    }
+
+    .about-wrapper {
+        flex-wrap: wrap;
+        .about-content {
+            text-align: center;
+            width: 100%;
+            margin-bottom: 40px;
+            min-height: 300px;
+            
+            @include mq($tablet) {
+                text-align: left;
+                width: 47%;
+                margin-bottom: 0;
+                min-height: 650px;
+            }
+
+            h2 {
+                text-align: left;
+                padding-bottom: 25px;
+                @include mq($tablet) {
+                    text-align: center;
+                }
+            }
+
+            p {
+                text-align: left;
+                line-height: 29px;
+    
+                &:not(:last-child) {
+                    padding-bottom: 27px;
+                }
+            }
+        }
+    
+        .about-section-right-img {
+            width: 100%;
+            height: 60vh;
+            min-height: 350px;
+            
+            @include mq($tablet) {
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 46%;
+                height: 90vh;
+                min-height: 650px;
+            }
+        
+            &::after {
+                content: none;
+                background-image: url('../../images/Union_8.png');
+                background-size: cover;
+                background-repeat: no-repeat;
+                height: 87px;
+                width: 146px;
+                position: absolute;
+                z-index: 3;
+                bottom: -44px;
+                left: -68px;
+                @include mq($tablet) {
+                    content: '';
+                }
+            }
+            .about-section__img {
+                position: relative;
+                object-fit: cover;
+                height: 100%;
+                width: 100%;
+                @include mq($tablet) {
+                    border-top-left-radius: 250px;
+                }
+            }
+        }
+    }
+}
+
+.video-section {
+    position: relative;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    
+    @include mq($device-xl) {
+        padding-top: 240px;
+        padding-bottom: 100px;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        background-image: url('../../images/Path_11838.png');
+        background-repeat: no-repeat;
+        height: 0;
+        width: 100%;
+        background-size: cover;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+        @include mq($device-xl) {
+            height: 898px;
+        }
+    }
+
+    .video {
+        position: relative;
+        
+        iframe {
+            outline: 10px solid var(--white);
+            border: 0;
+            width: 900px;
+            height: 400px;
+            @include mq($device-md) {
+                height: 450px;
+            }
+            @include mq($device-lg) {
+                width: 1000px;
+            }
+            @include mq($device-xl) {
+                width: 1200px;
+                height: 600px;
+            }
+        }
+
+        .video-btn{
+            inset: 0;
+            position: absolute;
+            @include flexCenter();
+        
+            > img {
+                background-color: var(--tradewind);
+                height: 100px;
+                width: 100px;
+                @include border-radius(50%);
+                object-fit: none;
+            }
+        }
+    }
+}
+
+.our-technology {
+    padding-top: 57px;
+    padding-bottom: 50px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    @include mq($device-xl) {
+        padding-top: 187px;
+        background-image: url('../../images/Path_11839.png');
+    }
+
+    h2 {
+        position: relative;
+        line-height: 28px;
+        margin: 0 auto;
+        width: fit-content;
+        padding-bottom: 40px;
+
+        @include mq($device-sm) {
+            padding-bottom: 50px;
+        }
+
+        @include mq($tablet) {
+            padding-bottom: 80px;
+        }
+
+        @include mq($device-lg) {
+            padding-bottom: 90px;
+        }
+
+        @include mq($device-xl) {
+            padding-bottom: 104px;
+        }
+
+        &::after {
+            position: absolute;
+            content: url('../../images/Union_11.png');
+            @include transform(rotate(90deg));
+            left: 48%;
+            top: -17px;
+            @include mq($device-sm) {
+                top: -15px;
+            }
+            @include mq($tablet) {
+                top: -10px;
+            }
+            @include mq($device-xl) {
+                top: 20px;
+            }
+            @include mq($container) {
+                top: 34px;
+            }
+        }
+    }
+
+    .padding-bottom {
+        margin-bottom: 30px !important;
+    }
+
+    p {
+        text-align: center;
+        margin: 0 auto;
+        max-width: 1206px;
+    }
+
+    .technologies-row {
+        margin-top: 80px;
+        flex-wrap: wrap;
+
+        @include mq(1400px) {
+            margin-bottom: 80px;
+        }
+
+        .tech-col {
+            width: 100%;
+            margin-bottom: 40px;
+
+            @include mq($device-md) {
+                width: 50%;
+            }
+
+            @include mq($tablet) {
+                width: 33.33%;
+            }
+
+            @include mq(1400px) {
+                width: 25%;
+                margin-bottom: 0;
+            }
+
+            .tech-col-content {
+                padding-top: 25px;
+                text-transform: uppercase;
+                text-align: center;
+                @include font-detail(17px, 27px);
+                @include mq($tablet) {
+                    @include font-detail(19px, 33px);
+                }
+            }
+
+            .round-shape {
+                background-color: var(--white);
+                width: 230px;
+                height: 230px;
+                @include box-shadow(0px, 0px, 30px, #c1c1c159);
+                @include border-radius(50%);
+        
+                > picture {
+                    max-width: 97.38px;
+        
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

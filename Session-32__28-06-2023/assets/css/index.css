@@ -1,0 +1,513 @@
+:root {
+    --bg-color-: #f1f1f1;
+    --font-color-: #008dd2;
+}
+
+/* --------- Reset css Starts ------------ */
+
+html, body, ul, i, li, form, header, section, div, p, h5, h4, h2, h1, span, ol, button, img, picture {
+    margin: 0;
+    padding: 0;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+ul, ol, li {
+    list-style: none;
+}
+
+a {
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+    color: black;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/* ------------- Reset css ends -------------- */
+
+/* ---------------- icons css starts ------------  */
+
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?dpj5ty');
+    src:  url('../fonts/icomoon.eot?dpj5ty#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?dpj5ty') format('truetype'),
+      url('../fonts/icomoon.woff?dpj5ty') format('woff'),
+      url('../fonts/icomoon.svg?dpj5ty#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-caret-down:before {
+    content: "\e900";
+  }
+  .icon-facebook:before {
+    content: "\ea90";
+  }
+  .icon-instagram:before {
+    content: "\ea92";
+  }
+  .icon-whatsapp:before {
+    content: "\ea93";
+  }
+  .icon-twitter:before {
+    content: "\ea96";
+  }
+  .icon-youtube:before {
+    content: "\ea9d";
+  }
+  .icon-linkedin2:before {
+    content: "\eaca";
+  }
+  
+  
+
+/* ---------------- icons css ends ------------  */
+
+/* ---------------- common css starts --------------- */
+
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+/* font-family: 'Barlow Condensed', sans-serif; */
+
+body {
+    color: #202020;;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 26px;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.btn {
+    cursor: pointer;
+    font-size: 14px;
+    display: inline-block;
+    border: 1px solid white;
+    color: #ffffff;
+    border-radius: 5px;
+    line-height: 1;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    padding: 15px 30px;
+    background: linear-gradient(45deg, rgba(0,141,210,1) 0%, rgba(46,65,131,1) 100%);
+}
+
+.btn-primary {
+    padding: 16px 14px;
+}
+
+.btn:hover {
+    color: white;
+    background: linear-gradient(45deg, #235395, #235395);
+    transition: all 0.5s ease-out;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+}
+
+p {
+    line-height: normal;
+}
+
+a:hover {
+    color: #008dd2;
+    transition: all 0.3s ease-in-out;
+}
+
+h4 {
+    font-size: 80px;
+    line-height: 1;
+}
+
+h1 {
+    font-size: 80px;
+    line-height: 1;
+}
+
+h2 {
+    font-size: 65px;
+    line-height: 1;
+}
+
+.section-heading {
+    position: relative;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600;
+    font-size: 110px;
+    padding-bottom: 80px;
+    padding-left: 50px;
+    line-height: 122px;
+}
+
+.section-heading::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    height: 50px;
+    top: 69px;
+    left: 0px;
+    width: 650px;
+    background: linear-gradient(45deg, rgba(0, 140, 210, 0.637) 0%, rgba(150,160,193,1) 100%);
+}
+
+h3 {
+    line-height: 1;
+    font-size: 50px;
+}
+
+h5 {
+    line-height: 1;
+    font-size: 36px;
+}
+
+h6 {
+    line-height: 1;
+    font-size: 24px;
+}
+
+p {
+    font-size: 18px;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.d-flex-col {
+    flex-direction: column;
+}
+
+.d-just-btwn {
+    justify-content: space-between;
+}
+
+.dots span{
+    display: inline-block;
+    height: 14px;
+    width: 14px;
+    border-radius: 100%;
+    background-color: #8f8f8f;
+    margin: 0 5px;
+}
+
+.section {
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    padding-top: 125px;
+    padding-bottom: 150px;
+}
+
+/* -------------------- common css ends ------------------- */
+
+.container {
+    grid-column-start: 3;
+    grid-column-end: 23;
+}
+
+.our-services p {
+    max-width: 1250px;
+    font-size: 36px;
+    line-height: 50px;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 78px;
+}
+
+.services-boxes {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    gap: 20px;
+}
+
+.services-boxes .service-box {
+    display: flex;
+    min-height: 400px;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    align-items: center;
+    background: #f1f1f1;
+}
+
+.services-boxes .service-box picture {
+    padding-bottom: 40px;
+}
+
+.services-boxes .service-box h5 {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.services-boxes .box1 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 5;
+}
+
+.services-boxes .box2 {
+    grid-column-start: 5;
+    grid-column-end: 9;
+    grid-row-start: 3;
+    grid-row-end: 7;
+}
+
+.services-boxes .box3 {
+    grid-column-start: 9;
+    grid-column-end: 13;
+    grid-row-start: 1;
+    grid-row-end: 5;
+}
+
+.services-boxes .box4 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 5;
+    grid-row-end: 9;
+}
+
+.services-boxes .box5 {
+    grid-column-start: 5;
+    grid-column-end: 9;
+    grid-row-start: 7;
+    grid-row-end: 11;
+}
+
+.services-boxes .box6 {
+    grid-column-start: 9;
+    grid-column-end: 13;
+    grid-row-start: 5;
+    grid-row-end: 9;
+}
+
+.services-boxes .box7 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 9;
+    grid-row-end: 13;
+}
+
+.services-boxes .box8 {
+    grid-column-start: 9;
+    grid-column-end: 13;
+    grid-row-start: 9;
+    grid-row-end: 13;
+}
+
+.e-commerce {
+    position: relative;
+    z-index: 1;
+    min-height: 600px;
+}
+
+.e-commerce.section {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.e-commerce .container {
+    display: flex;
+    align-items: center;
+}
+
+.e-commerce > img {
+    position: absolute;
+    object-fit: cover;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.e-commerce::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    width: 320px;
+    left: 0;
+    top: 12%;
+    bottom: 12%;
+    background: linear-gradient(45deg, rgba(0,141,210,1) 0%, rgba(46,65,131,1) 100%);
+}
+
+.e-com-content {
+    position: relative;
+    z-index: 3;
+    width: 60%;
+    color: #ffffff;
+}
+
+.e-com-content p {
+    line-height: normal;
+    font-size: 36px;
+    font-weight: 400;
+    padding-bottom: 28px;
+}
+
+.e-com-content h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600;
+    font-size: 110px;
+    line-height: 122px;
+    padding-bottom: 60px;
+}
+
+.blogs-main {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.blogs-main h2::after {
+    width: 400px;
+}
+
+.blogs-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 80px;
+}
+
+.blog-col {
+    position: relative;
+    min-height: 296px;
+    padding-left: 36px;
+    padding-right: 36px;
+    padding-bottom: 36px;
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-end;
+    padding-top: 10px;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.blog-col:hover img {
+    transition: all 0.5s ease-out;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
+
+.blog-col-three {
+    padding-right: 70px;
+}
+
+.blog-col > img {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.blog-col > .blog-info > h5 {
+    font-weight: 600;
+    padding-bottom: 20px;
+    line-height: normal;
+}
+
+.blog-col > .blog-info > span {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+.btn-long {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    color: #ffffff;
+    background: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    padding: 25px 41px 22px 42px;
+    transition: all 0.5s ease-out;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+}
+
+.btn-long:hover {
+    border-color: transparent;
+    background: #235395;
+    color: #ffffff;
+}
+
+.clients-section {
+    background: #f1f1f1;
+}
+
+.clients-section h2 {
+    position: relative;
+    z-index: 2;
+}
+
+.clients-section h2::after {
+    z-index: -1;
+    width: 450px;
+}
+
+.client-logos {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 25px;
+}
+
+.client-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+    background: #ffffff;
+}
+
+.client-logo picture {
+    max-width: 216px;
+}
+
+.client-logo > picture > img{
+    width: 100%;
+}

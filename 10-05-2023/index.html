@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Form</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <center>
+                <h1>Book Your Car</h1>
+            </center>
+            <fieldset>
+                <legend>Instructions</legend>
+                <ul>
+                    <li>Fill in all required fields to complete the registration form.</li>
+                    <li>Use a valid email address as it will be used for communication purposes.</li>
+                    <li>Review your entries before submitting the form to avoid any errors or omissions.</li>
+                </ul>
+            </fieldset>
+        </header>
+        <div class="form">
+            <form action="#" method="get" oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+                <fieldset>
+                    <legend>Client Car Form</legend>
+                    <fieldset>
+                        <legend>Personal Information</legend>
+
+                        <label for="fname">First Name:</label><br>
+                        <input type="text" id="fname" name="fname" placeholder="Enter Your Name" required>
+                        <br><br>
+
+                        <label for="lname">Last Name:</label><br>
+                        <input type="text" id="lname" name="lname" placeholder="Enter Your Name" required>
+                        <br><br>
+
+                        <label for="email">Enter Your Email:</label><br>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                        <br><br>
+
+                        <label for="phone-number">Phone Number:</label>
+                        <input type="tel" id="phone-number" name="phone-number" placeholder="Enter your phone number" required>
+                        <br><br>
+
+                        <label for="adress">Address:</label><br>
+                        <textarea name="address" id="address" cols="30" rows="2" placeholder="Enter Your Address" required></textarea>
+                        <br> <br>
+
+                        <label for="gender">Gender:</label>
+                        <input type="radio" id="male" name="gender" value="male" checked>
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">FeMale</label>
+                        <br> <br>
+
+                        <label for="state">State</label>
+                        <select name="states" id="state">
+                            <option value="">Gujarat</option>
+                            <option value="">Maharashtra</option>
+                            <option value="">Madhya Pradesh</option>
+                            <option value="">Delhi</option>
+                            <option value="">Punjab</option>
+                            <option value="">Rajasthan</option>
+                            <option value="">Uttar Pradesh</option>
+                            <option value="">Chhatisgadh</option>
+                            <option value="">Bihar</option>
+                            <option value="">Andhra Pradesh</option>
+                            <option value="">Goa</option>
+                            <option value="">Assam</option>
+                            <option value="">Kerala</option>
+                            <option value="">Tamil Nadu</option>
+                            <option value="">Odisha</option>
+                            <option value="">Haryana</option>
+                        </select>
+                        <br><br>
+                        <label for="zipcode">Zipcode:</label>
+                        <input type="number" pattern="\d{6}" id="zipcode" name="zipcode" placeholder="please enter a pincode" min="100000" max="999999" required>
+                        <br><br>
+                        <label for="client-photo">Client Photo:</label>
+                        <input type="file" id="client-photo" name="client-photo" required>
+                    </fieldset>
+                    <br>
+                    <fieldset>
+                        <legend>Vehicle Information</legend>
+                        <label for="model">Choose Vehicle Model:</label>
+                        <select name="models" id="model">
+                            <optgroup label="#Mercedes">
+                                <option value="">A-Class</option>
+                                <option value="">B-Class</option>
+                                <option value="">C-Class</option>
+                                <option value="">Maybech S-Class</option>
+                                <option value="">AMG GT</option>
+                            </optgroup>
+                            <optgroup label="#BMW">
+                                <option value="">X1</option>
+                                <option value="">X2</option>
+                                <option value="">X6</option>
+                                <option value="">8 series</option>
+                                <option value="">BMW M4</option>
+                            </optgroup>
+                            <optgroup label="#Range Rover">
+                                <option value="">Range Rover Sport</option>
+                                <option value="">Range Rover Vogue</option>
+                                <option value="">Range Rover Autobiography</option>
+                                <option value="">8 series</option>
+                                <option value="">BMW M4</option>
+                            </optgroup>
+                            <optgroup label="#Lamborghini">
+                                <option value="">Lamborghini Aventador</option>
+                                <option value="">Lamborghini Huracán</option>
+                                <option value="">Lamborghini Urus</option>
+                                <option value="">Lamborghini Sian</option>
+                                <option value="">Lamborghini Diablo</option>
+                            </optgroup>
+                        </select>
+                        <br><br>
+                        <label for="color">Select Car Color:</label>
+                        <input type="color" id="color" list="color-list" placeholder="Enter or select a color">
+                            <br> <br>
+
+                        <label>Fuel Type:</label>
+                        <input type="checkbox" id="petrol" name="fuel-type" value="petrol" checked>
+                        <label for="petrol">Petrol</label>
+                            
+                        <input type="checkbox" id="diesel" name="fuel-type" value="diesel">
+                        <label for="diesel">Diesel</label>
+                            
+                        <input type="checkbox" id="electric" name="fuel-type" value="electric">
+                        <label for="electric">Electric</label>
+                        <br><br>
+
+                        <label for="price">How Many Cars Do You Want to Purchase?</label>
+                        <input type="range" id="a" value="2" max="4">+
+                        <input type="number" id="b" value="1">
+                        =<output name="x" for="a b"></output>
+                        <br><br>
+
+                        <label for="date">Select Today's Date:</label>
+                        <input type="date" id="date" name="date" required>
+                        <br>
+                    </fieldset>
+                    <br>
+                    <button type="reset">Reset</button>
+                    <button type="submit">Submit</button>
+                </fieldset>
+                <br>
+            </form>
+        </div>
+        <footer>
+            <center>Thank You ! Visit Again</center>
+            <ul>
+                <li><a href="#AboutUs" target="_blank">About Us</a></li>
+                <li><a href="#ContactUs">Contact Us</a></li>
+                <li><a href="#Home">Home</a></li>
+            </ul>
+        </footer>
+    </div>
+</body>
+</html>

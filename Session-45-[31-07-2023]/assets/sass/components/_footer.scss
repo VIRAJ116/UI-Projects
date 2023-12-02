@@ -1,0 +1,246 @@
+.newsletter {
+    position: relative;
+    z-index: 2;
+    margin-bottom: -95px;
+    .container {
+        flex-wrap: wrap;
+        max-width: 1600px;
+        min-height: 196px;
+        padding: 61px 80px;
+        @include border-radius(10px);
+        background-color: var(--tradewind);
+        .news-col {
+            width: 100%;
+            margin-bottom: 20px;
+            @include mq($tablet) {
+                width: 50%;
+                margin-bottom: 0;
+            }
+            h5 {
+                color: var(--white);
+                margin-bottom: 16px;
+            }
+            p {
+                font-weight: 600;
+                color: var(--white);
+            }
+        }
+        .form-wrapper {
+            width: 100%;
+            @include mq($tablet) {
+                width: 50%;
+            }
+            form {
+                width: 100%;
+                align-items: flex-end;
+                @include mq($device-sm) {
+                    flex-direction: row;
+                }
+                .email-div {
+                    width: 100%;
+                    @include mq($device-sm) {
+                        margin-right: 10px;
+                        width: 50%;
+                    }
+                    @include mq($tablet) {
+                        margin-right: 20px;
+                        width: 540px;
+                    }
+                    input {
+                        @include border-radius(5px);
+                        width: 100%;
+                        border: none;
+                        padding: 12px 20px;
+                        margin-bottom: 20px;
+                        @include mq($device-sm) {
+                            padding: 17px 20px;
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+                button {
+                    @include flexCenter();
+                    width: 100%;
+                    min-height: 45px;
+                    @include mq($device-sm) {
+                        min-height: 50px;
+                        width: 50%;
+                    }
+                    @include mq($tablet) {
+                        min-height: 55px;
+                        width: 160px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.middle-footer {
+    background-color: var(--polar-color);
+    padding-top: 95px;
+    padding-bottom: 0;
+    @include mq($device-md) {
+        padding-bottom: 50px;
+    }
+    .privacy-policy {
+        padding-top: 40px;
+        @include mq($device-md) {
+            padding-top: 50px;
+        }
+        .container {
+            max-width: 1050px;
+            padding: 28px 80px;
+            @include border-radius(5px);
+            background-color: var(--bluelagoon);
+            @include mq($device-md) {
+                padding-left: 74px;
+                padding-right: 74px;
+            }
+            .privacy-lists {
+                flex-wrap: wrap;
+                @include mq($device-md) {
+                    flex-direction: row;
+                }
+                li {
+                    a {
+                        font-weight: 700;
+                        color: var(--white);
+                    }
+                    &:not(:last-child) {
+                        padding-right: 20px;
+                    }
+                }
+            }
+        }
+    }
+    .contact-us {
+        padding: 50px 0;
+        .container {
+            max-width: 1155px;
+            padding: 0;
+            .contact-row {
+                justify-content: center;
+                flex-wrap: wrap;
+                .contact-col {
+                    position: relative;
+                    width: 100%;
+                    margin-bottom: 30px;
+                    padding-left: 80px;
+                    @include mq($device-md) {
+                        padding: 0 50px;
+                        width: 50%;
+                    }
+                    @include mq(1080px) {
+                        width: 33.33%;
+                        margin-bottom: 0;
+                    }
+                    .icon {
+                        @include flexCenter();
+                        width: 55px;
+                        height: 55px;
+                        background-color: var(--bluelagoon);
+                        @include border-radius(100%);
+                        margin-right: 15px;
+                        picture {
+                            max-width: 22px;
+                        }
+                    }
+                    .about-us {
+                        h6 {
+                            color: var(--bluelagoon);
+                        }
+                    }
+                    &:not(:last-child)::after {
+                        content: none;
+                        @include mq(1080px) {
+                            content: '';
+                            position: absolute;
+                            background-color: var(--tradewind);
+                            width: 2px;
+                            top: 0;
+                            right: 0;
+                            bottom: 0;
+                        }
+                    }
+                }
+                .col-one {
+                    justify-content: flex-start;
+                    @include mq($device-md) {
+                        justify-content: center;
+                    }
+                    @include mq(1080px) {
+                        justify-content: flex-start;
+                    }
+                }
+                .col-two {
+                    justify-content: flex-start;
+                    @include mq($device-md) {
+                        justify-content: center;
+                    }
+                    @include mq(1080px) {
+                        justify-content: center;
+                    }
+                }
+                .col-three {
+                    justify-content: flex-start;
+                    @include mq($device-md) {
+                        justify-content: center;
+                    }
+                    @include mq(1080px) {
+                        justify-content: flex-end;
+                    }
+                }
+            }
+        }
+    }
+    .quote {
+        .container {
+            background-color: var(--white);
+            max-width: 800px;
+            padding: 26px 80px;
+            @include mq($device-md) {
+                padding-left: 67px;
+                padding-right: 67px;
+            }
+            h4 {
+                @include font-family(var(--font_primary), 900);
+                @include font-detail(20px, 28px);
+                font-style: italic;
+                color: var(--bluelagoon);
+                @include mq($device-md) {
+                    @include font-detail(24px, 28px);
+                }
+                @include mq($device-xl) {
+                    @include font-detail(27px, 28px);
+                }
+            }
+        }
+    }
+}
+
+.footer-bottom {
+    min-height: 80px;
+    background-color: var(--bluelagoon);
+    .container {
+        width: 100%;
+        @include mq($device-sm) {
+            flex-direction: row;
+        }
+        p {
+            color: var(--white);
+            margin-bottom: 15px;
+            @include mq($device-sm) {
+                margin-bottom: 0;
+            }
+        }
+        .icon-lists {
+            a {
+                max-width: 29.4px;
+                &:not(:last-child) {
+                    margin-right: 23.4px;
+                }
+            }
+        }
+    }
+}

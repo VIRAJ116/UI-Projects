@@ -1,0 +1,77 @@
+.banner-section {
+    margin-top: 160px;
+    padding: 32px 0;
+
+    @include mq($device-md) {
+        padding: 60px 0;
+    }
+    @include mq($tablet) {
+        padding: 70px 0;
+    }
+    @include mq($device-xl) {
+        padding-top: 150px;
+        padding-bottom: 89px;
+    }
+    .container {
+        .banner-wrapper {
+            @include row;
+            padding-bottom: 20px;
+            @include mq($device-xl) {
+                padding-bottom: 38px;
+            }
+            .banner-left {
+                width: 100%;
+                margin-bottom: 30px;
+                @include mq($device-md) {
+                    width: 95%;
+                    margin-bottom: 0;
+                }
+                h1 {
+                    position: relative;
+                    max-width: 505px;
+                    padding-bottom: 25px;
+                    &::after {
+                        position: absolute;
+                        content: '';
+                        background-color: var(--cod-gray-color);
+                        left: 0;
+                        bottom: 0;
+                        width: 79.2%;
+                        height: 4px;
+                    }
+                    .line-clamp {
+                        @include text-clamp(1);
+                    }
+                }
+                h2 {
+                    padding-top: 34px;
+                    padding-bottom: 32px;
+                }
+                p {
+                    @include font-xs;
+                    margin-bottom: 42px;
+                    max-width: 614px;
+                }
+                .btn-big {
+                    border: 2px solid var(--red-color);
+                    color: var(--red-color);
+                    background-color: var(--white-color);
+                    &:hover {
+                        background-color: var(--red-color);
+                        color: var(--white-color);
+                    }
+                }
+            }
+            .banner-right {
+                width: 100%;
+                @include mq($device-md) {
+                    width: 97%;
+                }
+                picture {
+                    display: inherit;
+                    max-width: 870px;
+                }
+            }
+        }
+    }
+}

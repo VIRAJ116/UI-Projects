@@ -1,0 +1,43 @@
+@import './assets/sass/common/variable';
+@import './assets/sass/common/mixin';
+@import './assets/sass/common/base';
+@import './assets/sass/components/header';
+@import './assets/sass/components/sidebar';
+@import './assets/sass/components/banner';
+@import './assets/sass/components/about-us';
+@import './assets/sass/components/our-work';
+@import './assets/sass/components/contact';
+@import './assets/sass/components/footer';
+
+.btnScrollToTop {
+    position: fixed;
+    height: 40px;
+    z-index: 10;
+    width: 40px;
+    opacity: 0;
+    right: 10px;
+    bottom: 25px;
+    @include mq($device-md) {
+        bottom: 42px;
+        right: 60px;
+        height: 54px;
+        width: 54px;
+    }
+    &:hover {
+        background-color: var(--white-color);
+    }
+    i {
+        font-size: 16px;
+    }
+}
+
+.btnScrollToTop.active{
+    opacity: 1; 
+}
+
+.btnScrollToTop.stop {
+    bottom: 20px;
+    @include mq($device-md) {
+        bottom: 143px;
+    }
+}

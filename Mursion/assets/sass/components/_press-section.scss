@@ -1,0 +1,84 @@
+.press-section {
+  .custom-container {
+    .press-row {
+      .press-card {
+        @apply px-[15px]
+                relative
+                w-full
+                sm:w-1/2
+                md:w-1/2
+                lg:w-1/3;
+
+        .press-card-inner {
+          @apply bg-wildsand
+                    transition-all
+                    duration-500
+                    border-[1px]
+                    border-iron
+                    pt-[30px]
+                    pb-[14px]
+                    px-[36px]
+                    min-h-[236px];
+          &:hover {
+            @apply bg-kovayellow;
+            .read-btn {
+              @apply sm:opacity-100
+              sm:visible
+              sm:pointer-events-auto;
+            }
+          }
+          .press-logo {
+            @apply max-w-[217px]
+            inline-block
+            mb-[20px];
+            img {
+                @apply h-[45px]
+                object-contain;
+            }
+          }
+          .press-card-text {
+            @apply text-elephant
+            font-LyonRegular
+            text-[24px]
+            mb-[10px]
+            leading-[28px]
+            tracking-[1px]
+            line-clamp-4;
+          }
+          .read-btn {
+            @apply sm:opacity-0
+            sm:invisible
+            sm:pointer-events-none
+            flex
+            transition-all
+            duration-500
+            font-fontbody
+            text-[18px]
+            text-primaryred
+            leading-[28px]
+            items-center;
+            &:hover {
+              .icon-right-arrow {
+                @apply left-[20px];
+              }
+            }
+            .icon-right-arrow {
+              @apply relative
+              transition-all
+              sm:hidden
+              text-[20px]
+              ml-[8px];
+            }
+          }
+          .bottom-arrow-img {
+            @apply hidden
+            transition-all
+            duration-500
+            absolute
+            max-w-[88]
+          }
+        }
+      }
+    }
+  }
+}

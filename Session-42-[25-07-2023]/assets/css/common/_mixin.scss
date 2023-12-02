@@ -1,0 +1,21 @@
+@mixin transition($duration: 0.5s) {
+    transition: all $duration ease-in-out;
+    -webkit-transition: all $duration ease-in-out;
+    -moz-transition: all $duration ease-in-out;
+    -o-transition: all $duration ease-in-out;
+    -ms-transition: all $duration ease-in-out;
+}
+
+@mixin box-sizing($value: border-box) {
+    box-sizing: $value;
+    -o-box-sizing: $value;
+    -moz-box-sizing: $value;
+    -webkit-box-sizing: $value;
+}
+
+@mixin mq($size) {
+    @media only screen and (min-width: $size) {
+        @content;
+    }
+}
+

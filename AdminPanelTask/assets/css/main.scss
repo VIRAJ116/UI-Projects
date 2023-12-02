@@ -1,0 +1,43 @@
+@import './common/fonts';
+@import './common/variable';
+@import './common/mixin';
+@import './common/button';
+@import './common/base';
+@import './layouts/header';
+@import './layouts/main';
+@import './layouts/sidebar';
+
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 114px 1fr;
+    grid-template-areas:
+            "header"
+            "main";
+    @include mq(992px) {
+        grid-template-columns: 240px 1fr;
+        grid-template-areas:
+            "sidebar header"
+            "sidebar main";
+    }
+    @include mq(1200px) {
+        grid-template-columns: 300px 1fr;
+    }
+    @include mq(1400px) {
+        grid-template-columns: 350px 1fr;
+    }
+    @include mq(1600px) {
+        grid-template-columns: 450px 1fr;
+    }
+}
+
+.sidebar-open {
+	@include mq(992px) {
+		grid-template-columns: 100px 1fr;
+		grid-template-rows: 114px 1fr;
+		grid-template-areas:
+			"sidebar header"
+			"sidebar main";
+	}
+}

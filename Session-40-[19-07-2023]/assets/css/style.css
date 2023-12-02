@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&family=Lexend+Deca:wght@100;200;300;400;500;600;700&family=Montserrat:wght@400;700&family=Mulish:wght@300&family=Poppins:wght@300;400;600&family=Urbanist:wght@300;400;600;700;800;900&display=swap');
+
+/* ---------- common css starts ------------ */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    font-family: "Urbanist", sans-serif;
+}
+
+:root{
+    --bs-dark-color: #1a1d20;
+    --bs-dark-primary:#1c1c1c;
+    --bs-main-color:#fff;
+    --bs-primary-color:#c6c6c6;
+    --bs-two-secondary-color: #29a9fd;
+    --bs-supporting-color: #C850C0;
+}
+
+h1, h2,h3,h4,h5{
+    font-family: 'Lexend Deca', sans-serif;
+    color: var( --bs-dark-color);
+}
+
+/* h2{
+    line-height: 48px;
+    font-weight: 600;
+    font-size: 3.4rem;
+} */
+
+p{
+    margin: 0;
+    font-weight: 400;
+    font-size: 1rem;
+    color: var( --bs-dark-color);
+    letter-spacing: 0.07rem;
+    line-height: 1.55rem;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+}
+
+a{
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+button, a {
+    font-size: 1.15rem !important;
+    letter-spacing: 0.03rem;
+    word-spacing: 0.1rem;
+}
+
+@media only screen and (min-width: 375px) {
+    .section-padding {
+        padding-top: 50px;
+        padding-bottom: 10px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .section-padding {
+        padding-top: 90px;
+        padding-bottom: 90px;
+    }
+}
+
+.common-heading {
+    /* font-size: 2.8rem; */
+    font-weight: 500;
+    letter-spacing: 0.01rem;
+}
+
+.bg-color{
+    background-color: var(--bs-dark-primary);
+}
+
+.text-light-grey {
+    color: var(--bs-primary-color);
+}
+
+.fa-star {
+    color: var( --bs-supporting-color);
+}
+
+/* ---------- common css ends ------------ */
+
+/* ------------ custom css starts ----------- */
+
+.nav-link {
+    color: var(--bs-main-color)!important;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.nav-link:hover {
+    color: var(--bs-two-secondary-color) !important;
+}
+
+.dropdown-menu {
+    background: rgba(33, 37, 41, 0.8);
+}
+
+.dropdown-item {
+    color: var(--bs-main-color);
+}
+
+.dropdown-item:hover {
+    color: var(--bs-two-secondary-color) !important;
+}
+
+/* ------- hero sectio starts ----------- */
+
+.hero-section .container {
+    display: grid;
+    place-content: center;
+}
+
+.bg-main {
+    position: relative;
+}
+
+@media only screen and (min-width: 768px) {
+    .bg-main {
+        min-height: 540px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .bg-main {
+        min-height: 600px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .bg-main {
+        min-height: 650px;
+    }
+}
+
+.hero-video--section {
+    width: 300px;
+    border-radius: 2rem;
+}
+
+@media only screen and (min-width: 576px) {
+    .hero-video--section {
+        width: 350px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .hero-video--section {
+        width: 360px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .hero-video--section {
+        width: 400px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .hero-video--section {
+        width: 500px;
+    }
+}
+
+.custom-shape-divider-bottom-1689722567 {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+@media only screen and (min-width: 375px) {
+    .custom-shape-divider-bottom-1689722567 svg {
+        height: 50px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .custom-shape-divider-bottom-1689722567 svg {
+        height: 100px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .custom-shape-divider-bottom-1689722567 svg {
+        height: 120px;
+    }
+}
+
+.custom-shape-divider-bottom-1689722567 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+}
+
+.custom-shape-divider-bottom-1689722567 .shape-fill {
+    fill: #FFFFFF;
+}
+
+/* ------- hero sectio ends ----------- */
+
+/* -------- services section starts ---------- */
+
+.icon-span {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: var(--bs-two-secondary-color);
+    color: var(--bs-main-color);
+    transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+}
+
+.icon-span:hover {
+    background-color: var(--bs-dark-primary);
+    color: var(--bs-two-secondary-color);
+}
+
+.card-box {
+    box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+}
+
+.card-box picture {
+    max-width: 140px;
+}
+
+@media only screen and (min-width: 576px) {
+    .card-box picture {
+        max-width: 160px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .card-box picture {
+        max-width: 180px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .card-box picture {
+        max-width: 200px;
+    }
+}
+
+/* -------- services section ends ---------- */
+
+/* ------------ custom css ends ----------- */

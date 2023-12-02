@@ -1,0 +1,50 @@
+.breadcrumb {
+    padding-top: 34px;
+    padding-bottom: 64px;
+
+    @include mq($device-xl) {
+        padding-top: 84px;
+    }
+
+    .container {
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: '';
+            top: 46px;
+            left: 20px;
+            right: 20px;
+            background: var(--line-color);
+            height: 1px;
+        }
+
+        .page-lists {
+            .home-page {
+                a {
+                    font-weight: 400;
+                    color: var(--bluelagoon);
+                }
+            }
+            li {
+                a {
+                    position: relative;
+                    color: var(--dove-gray);
+                    font-weight: 700;
+                    line-height: 33px;
+                
+                    &::after {
+                      content: '/';
+                      margin-left: 10px;
+                      margin-right: 10px;
+                    }
+                }
+                span {
+                    color: var(--dove-gray);
+                    font-weight: 700;
+                    line-height: 33px;
+                }
+            }
+        }
+    }
+}

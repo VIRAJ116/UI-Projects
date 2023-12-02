@@ -1,0 +1,97 @@
+@import './mixin';
+// reset css starts 
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    @include box(border-box);
+}
+
+body {
+    @include body-font;
+    margin: 0;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+body {
+    html, body,
+    header, main, footer,
+    section, div,
+    h1, h2, h3, h4, h5, h6, 
+    p, span, ul, li
+    img, figure,
+    label, input,
+    textarea,
+    a, i{
+        margin:0;
+        padding:0;
+        font-size: 100%;
+    }
+
+    header, 
+    main, footer,
+    section, 
+    div, figure, 
+    nav{
+        display: block;
+    }
+
+    p, h1, h2, h3, h4, h5, h6 {
+        overflow-wrap: break-word;
+    }
+
+    img{
+        vertical-align: middle;
+        display: inline-block;
+        max-width: 100%;
+    }
+
+    ul{
+        list-style: none;
+    }
+
+    a {
+        @include font-detail(14px, 22px);
+        @include font-family('GTAmericaMono-Regular', 400);
+        display: inline-block;
+        vertical-align: middle;
+        text-decoration: none;
+        outline: none;
+    }
+
+    span, i{
+        display: inline-block;
+    }
+
+    button {
+        border:none;
+        background-color: none;
+        cursor: pointer;
+        outline:none;
+    }
+
+    input:focus, select:focus{
+        outline:none;
+    }
+    // reset css ends
+    h1,.h1 {
+        @include h1;
+    }
+
+    h2 {
+        @include h2;
+    }
+
+    h3 {
+        @include h3;
+    }
+
+    h4 {
+        @include h4;
+    }
+
+    h6 {
+        @include h6;
+    }
+}

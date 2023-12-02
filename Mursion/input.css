@@ -1,0 +1,32 @@
+@import './assets/sass/common/_fonts.scss';
+@import "./assets/sass/common/_buttons.scss";
+@import "./assets/sass/components/_press-section.scss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        &::-webkit-scrollbar {
+            display: none
+        }
+    }
+    p {
+        @apply text-[18px] leading-[30px];
+    }
+    span {
+        @apply text-[16px] leading-[26px];
+    }
+    h1,.h1 {
+        @apply text-[32px] leading-[40px] md:text-[46px] md:leading-[56px] xl:text-[56px] xl:leading-[67px];
+    }
+    h2 {
+        @apply text-[24px] leading-[28px] md:text-[34px] md:leading-[44px] xl:text-[48px] xl:leading-[58px];
+    }
+    h3 {
+        @apply text-[18px] leading-[28px] md:text-[26px] md:leading-[30px] xl:text-[32px] xl:leading-[40px];
+    }
+    .custom-container {
+        @apply max-w-[1286px] mx-auto w-full px-[20px]
+    }
+}

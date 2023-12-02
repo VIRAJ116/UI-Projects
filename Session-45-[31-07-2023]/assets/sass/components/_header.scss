@@ -1,0 +1,191 @@
+header {
+    position: relative;
+    background: linear-gradient(to right, var(--bluelagoon), var(--tradewind));
+
+    @include mq($device-xl) {
+        padding-bottom: 66px;
+    }
+
+    &::before {
+        position: absolute;
+        content: '';
+        top: 132px;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: var(--white);
+        @include opacity(0.3);
+    }
+    &::after {
+        position: absolute;
+        top: 152px;
+        content: none;
+        background-image: url('../../images/wave-header-shape.png');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        height: 104px;
+        width: 100%;
+        right: 0;
+        @include mq($device-xl) {
+            content: '';
+        }
+    }
+
+    .navbar {
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        .header-logo {
+            picture {
+                max-width: 202px;
+            }
+        }
+
+        .header-right {
+            display: none;
+            column-gap: 60px;
+
+            @include mq(1400px) {
+                display: flex;
+            }
+        
+            > .nav-lists {
+                .angle {
+                    position: relative;
+                    line-height: 1;
+                    margin-right: 42px !important;
+                  
+                    a {
+                      @include flexbox();
+                      @include align-item-end;
+                      i {
+                        margin-left: 6.59px;
+                      }
+                    }
+                }
+                > li {
+                    &:hover {
+                        .sub-menu {
+                            @include opacity(1);
+                            visibility: visible;
+                        }
+                    }
+                    &:not(:last-child) {
+                        margin-right: 60px;
+                    }
+                    > a {
+                        position: relative;
+                        padding-top: 30px;
+                        padding-bottom: 30px;
+                        line-height: 1;
+                        font-weight: 700;
+                        color: var(--white);
+                        &:hover {
+                            &::after {
+                                position: absolute;
+                                content: url('../../images/Path7.png');
+                                text-align: -webkit-center;
+                                top: 52px;
+                                right: 0;
+                                left: 0;
+                            }
+                        }
+                    }
+
+                    .sub-menu {
+                        position: absolute;
+                        padding: 20px 0;
+                        top: 74px;
+                        min-width: 220px;
+                        right: 0;
+                        background-color: var(--white);
+                        z-index: 1;
+                        @include opacity(0);
+                        @include box-shadow(0px, 10px, 20px, #00000029);
+                        visibility: hidden;
+                      
+                        &::after {
+                          content: "";
+                          position: absolute;
+                          top: -6px;
+                          right: 8px;
+                          width: 40px;
+                          height: 40px;
+                          @include transform(rotate(45deg));
+                          background-color: var(--white);
+                        }
+                      
+                        a {
+                          color: var(--dove-gray);
+                          pointer-events: none;
+                          font-size: 15px;
+                          font-weight: 700;
+                          line-height: 40px;
+                          padding-left: 20px;
+                          padding-right: 40px;
+                      
+                          &:hover {
+                            color: var(--bluelagoon);
+                            font-weight: 700;
+                            font-size: 15px;
+                          }
+                          &::after{
+                            display: none;
+                          }
+                        }
+                      
+                        li {
+                            &:hover {
+                                background-color: var(--catskill-white);
+                                a {
+                                  color: var(--bluelagoon);
+                                  font-weight: 700;
+                                  font-size: 15px;
+                                }
+                            }
+                        }
+                    }
+                }
+        
+                > .path {
+                    a {
+                        pointer-events: none;
+                        &::after {
+                            position: absolute;
+                            content: url('../../images/Path7.png');
+                            text-align: -webkit-center;
+                            top: 52px;
+                            right: 0;
+                            left: 0;
+                        }
+                    }
+                }  
+            }
+        
+            .icon-lists {
+                a {
+                    max-width: 25px;
+        
+                    &:not(:last-child) {
+                        margin-right: 20px;
+                    }
+                }
+            }
+            .btn-primary {
+                min-width: 130px;
+            }
+        }
+        button {
+            @include flexCenter();
+            border: none;
+            background-color: var(--bluelagoon);
+            i {
+                font-size: 22px;
+                color: var(--white);
+            }
+            @include mq(1400px) {
+                display: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,149 @@
+// reset css starts 
+*{
+    margin: 0;
+    padding: 0;
+    @include box-sizing(border-box);
+    font-family: var(--secondary-font);
+}
+
+html, body,
+header, main, footer,
+section, div,
+h1, h2, h3, h4, h5, h6, 
+p, span, ul, li
+img, figure,
+label, input,
+textarea,
+a, i{
+    margin:0;
+    padding:0;
+    font-size: 100%;
+}
+
+header, 
+main, footer,
+section, 
+div, figure, 
+nav{
+    display: block;
+}
+
+img{
+    vertical-align: middle;
+    display: inline-block;
+    width:100%;
+}
+
+ul{
+    list-style: none;
+}
+
+a {
+    font-size: 16px;
+    vertical-align: middle;
+    text-decoration: none;
+    color: var(--black);
+    display: inline-block;
+    outline: none;
+}
+
+span, i{
+    display: inline-block;
+}
+
+button {
+    border:none;
+    background-color: none;
+    cursor: pointer;
+    outline:none;
+}
+
+input:focus, select:focus{
+    outline:none;
+}
+// reset css ends
+
+h1 {
+    font-size: 28px;
+
+    @include mq(576px) {
+        font-size: 30px;
+    }
+    @include mq(768px) {
+        font-size: 34px;
+    }
+    @include mq(992px) {
+        font-size: 36px;
+    }
+    @include mq(1200px) {
+        font-size: 40px;
+    }
+}
+
+h2 {
+    font-size: 24px;
+    @include mq(576px) {
+        font-size: 26px;
+    }
+    @include mq(768px) {
+        font-size: 28px;
+    }
+    @include mq(992px) {
+        font-size: 30px;
+    }
+    @include mq(1200px) {
+        font-size: 32px;
+    }
+}
+
+h5 {
+    font-size: 20px;
+}
+
+h1,h2,h3,h4,h5 {
+    font-family: var(--primary-font);
+    color: var(--bs-dark-color);
+}
+
+p{
+    margin: 0;
+    font-weight: 400;
+    font-size: 1rem;
+    color: var( --bs-dark-color);
+    letter-spacing: 0.07rem;
+    line-height: 1.55rem;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+}
+
+a{
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.common-heading {
+    font-weight: 500;
+    letter-spacing: 0.01rem;
+}
+
+.bg-color{
+    background-color: var(--bs-dark-primary);
+}
+
+.text-light-grey {
+    color: var(--bs-primary-color);
+}
+
+.section-padding {
+    @include mq(375px){
+        padding-top: 50px;
+        padding-bottom: 10px;
+    }
+    @include mq(992px){
+        padding-top: 90px;
+        padding-bottom: 10px;
+    }
+}

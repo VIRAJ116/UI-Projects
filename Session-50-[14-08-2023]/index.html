@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session-50</title>
+    <script src="https://kit.fontawesome.com/97c281afd5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <main>
+        <div class="first-row row">
+            <h4 class="d-flex">Form</h4>
+            <p>Fields marked with <span class="star-red"></span> are mandatory.</p>
+        </div>
+        <div class="second-row row">
+            <div class="name d-flex d-flex-col">
+                <label class="label-mb" for="name">Name<span class="star-red"></span></label>
+                <input class="input_form_control" autocomplete="off" type="text" name="name" id="name" placeholder="Name">
+                <p class="error" id="error-name"></p>
+            </div>  
+            <div class="email d-flex d-flex-col">
+                <label class="label-mb" for="email">Email <span class="star-red"></span></label>
+                <input class="input_form_control" type="email" name="email" id="email" placeholder="Email">
+                <p class="error" id="error-email"></p>
+            </div>
+        </div>
+        <div class="third-row row">
+            <div class="number d-flex d-flex-col">
+                <label for="number">Contact Number <span class="star-red"></span></label>
+                <input class="input_form_control" type="number" data-maxlength="10" autocomplete="off" oninput="this.value=this.value.slice(0,this.dataset.maxlength)" name="number" id="number" placeholder="Contact Number">
+                <p class="error" id="error-contact"></p>
+            </div>
+            <div class="gender d-flex">
+                <label class="label-mb" for="gender">Gender <span class="star-red"></span></label>
+                <div class="options d-flex">
+                    <div class="male option">
+                        <label for="male">
+                            Male
+                            <input type="radio" name="gender" id="male" checked>
+                            <span class="radio-span"></span>
+                        </label>
+                    </div>
+                    <div class="female option">
+                        <label for="female">
+                            Female
+                            <input type="radio" name="gender" id="female">
+                            <span class="radio-span"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fourth-row row">
+            <div class="address d-flex d-flex-col">
+                <label class="label-mb" for="address">Address</label>
+                <textarea class="input_form_control" name="address" id="address" rows="4" placeholder="Address"></textarea>
+                <p class="error" id="error-address"></p>
+            </div>
+            <div class="logo">
+                <label class="label-mb" for="logo">Logo</label>
+                <div class="profile">
+                    <div class="profile-img">
+                        <img id="previewImage" src="assets/images/upload_file.jpeg" alt="upload-image">
+                    </div>
+                    <a class="change-profile" href="#">Change</a>
+                    <input type="file" name="file" id="file">
+                </div>
+            </div>
+        </div>
+        <div class="fifth-row row">
+            <div class="left-div fifth-row-box">
+                <div class="switch-label">
+                    <label for="loginswitch">Allow Multiple Login</label>
+                </div>
+                <div class="switch-box">
+                    <label for="switch">
+                        <input type="checkbox" name="switch" class="switch-input" id="switch">
+                        <span class="switch-slider"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="right-div fifth-row-box">
+                <div class="switch-label">
+                    <label for="emailalert">Enquiry Email Alerts</label>
+                </div>
+                <div class="switch-box">
+                    <label for="switch-two">
+                        <input type="checkbox" name="switch-two" class="switch-input" id="switch-two">
+                        <span class="switch-slider"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="btn-row d-flex">
+        <button id="submit" type="submit" class="btn btn-primary">Update</button>
+        <button class="btn btn-secondary">Cancel</button>
+    </div>
+    <script src="assets/js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+.about-us {
+    padding: 50px 0;
+    background-color: var(--cod-gray-color);
+    @include mq($tablet) {
+        padding: 80px 0;
+    }
+    @include mq($device-xl) {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    .container {
+        .about-us-wrapper {
+            @include row;
+            .about-left {
+                margin-bottom: 40px;
+                margin-right: 0;
+                @include mq($device-md) {
+                    margin-right: 25px;
+                    margin-bottom: 0;
+                }
+                picture {
+                    display: inherit;
+                    max-width: 467px;
+                    @include mq($device-md) {
+                        max-width: 667px;
+                    }
+                }
+            }
+            .about-right {
+                margin-left: 12px;
+                @include mq($device-md) {
+                    margin-left: 0;
+                }
+                .h1-primary {
+                    margin-bottom: 10px;
+                }
+                .h1-secondary {
+                    position: relative;
+                    padding-bottom: 26px;
+                    &::after {
+                        position: absolute;
+                        content: '';
+                        background-color: var(--light-color);
+                        height: 4px;
+                        width: 42.5%;
+                        left: 0;
+                        bottom: 0;
+                    }
+                }
+                h2 {
+                    padding-top: 34px;
+                    color: var(--white-color);
+                    margin-bottom: 20px;
+                }
+                p {
+                    color: var(--white-color);
+                    margin-bottom: 67px;
+                }
+                .btn {
+                    background-color: transparent;
+                    color: var(--red-color);
+                    border: 2px solid var(--red-color);
+                    &:hover {
+                        border-color: var(--white-color);
+                        color: var(--white-color);
+                        background-color: black;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,254 @@
+/* Reset css starts */
+
+html, body, ul, li, form, header, section, div, p, h5, h4, h2, h1, span, ol, button, img, picture {
+    margin: 0;
+    padding: 0;
+}
+
+ul, ol, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Reset css ends */
+
+/* common css starts */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1140px;
+    padding: 0 20px;
+}
+
+body {
+    color: black;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.clearfix::before,
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+img {
+    width: 100%;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    font-size: 16px;
+    color: white;
+    border-radius: 20px;
+    padding: 10px 30px;
+    border-style: none;
+    cursor: pointer;
+}
+
+/* common css ends */
+
+/* custom css starts  */
+
+.main-header {
+    padding: 20px 0px;
+    width: 100%;
+    background: gray;
+    color: white;
+    text-align: center;
+}
+
+.header-logo-text {
+    font-size: 24px;
+    color: white;
+}
+
+.fa-bars {
+    cursor: pointer;
+    float: left;
+    font-size: 24px;
+    padding-top: 5px;
+}
+
+.fa-magnifying-glass {
+    cursor: pointer;
+    float: right;
+    font-size: 24px;
+    padding-top: 5px;
+}
+
+.main-section {
+    padding: 100px 0;
+    background-color: #E5E5E5;
+}
+
+.main-section-image {
+    position: relative;
+    float: left;
+    width: 731px;
+}
+
+.main-section-image img {
+    width: 100%;
+    border-radius: 100%;
+    box-shadow: 0 0 0 20px #0ebbd0;
+}
+
+.circle-primary {
+    position: absolute;
+    top: 630px;
+    left: 90px;
+    background: transparent;
+    height: 160px;
+    width: 160px;
+    border-radius: 100%;
+    box-shadow: 0 0 0 50px #0ebbd0;
+}
+
+.circle-secondary {
+    height: 168px;
+    width: 168px;
+    position: absolute;
+    top: 900px;
+    left: 320px;
+    background-image: radial-gradient(circle at center, #0ebbd0 0%, #0ebbd0 100%);
+    border-radius: 100%;
+}
+
+.contact-us-section {
+    position: relative;
+    margin-top: -522px;
+    z-index: 2;
+    float: right;
+    width: 50%;
+    box-shadow: 0 0px 20px rgb(0 0 0 / 30%);
+}
+
+.about-us-section {
+    padding: 30px;
+    padding-bottom: 50px;
+    color: white;
+    background-color: #0ebbd0;
+}
+
+.about-us {
+    padding: 30px 30px 25px;
+}
+
+.about-us i {
+    font-size: 20px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.about-us h5 {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.about-us p {
+    margin: 20px 1px 0 0;
+}
+
+.main-form-section {
+    color: black;
+    background-color: white;
+    padding: 30px;
+}
+
+.main-form-section h2 {
+    font-size: 60px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.form-section {
+    font-size: 16px;
+    padding: 10px 30px;
+}
+
+.form-section input {
+    font-size: 14px;
+    padding-bottom: 10px;
+    border: none;
+    display: block;
+    padding: 10px 12px;
+    width: 100%;
+    border-bottom: 2px solid black;
+    margin-bottom: 28px;
+}
+
+.form-section input[type=text]:disabled:hover {
+    background: rgba(255, 0, 0, 0.286);
+    cursor: not-allowed;
+}
+
+.form-section input:read-only:hover {
+    cursor: pointer ;
+    background-color: rgba(173, 216, 230, 0.475);
+}
+
+.form-section textarea {
+    font-size: 14px;
+    padding-bottom: 10px;
+    border: none;
+    display: block;
+    width: 100%;
+    resize: none;
+    border-bottom: 2px solid black;
+    margin-bottom: 5px;
+}
+
+.btn-primary {
+    font-size: 16px;
+    font-weight: 700;
+    padding: 19px 30px 19px;
+    width: 100%;
+    background-color: #0ebbd0;
+    margin-bottom: 30px;
+}
+
+.btn-primary:hover {
+    background-color: black;
+    color: white;
+}
+
+.form-section input:focus {
+    outline: none;
+    color: black;
+    border-bottom: 2px solid red;
+}
+
+.form-section textarea:focus {
+    outline: none;
+    color: black;
+    border-bottom: 2px solid red;
+}
+
+footer {
+    text-align: center;
+    background-color: #333333;
+    padding: 40px 16px;
+    color: white;
+}
+
+footer a {
+    color: #B8CDF0;
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+/* custom css ends  */

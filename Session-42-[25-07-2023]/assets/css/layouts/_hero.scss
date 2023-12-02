@@ -1,0 +1,66 @@
+.bg-main {
+    position: relative;
+
+    @include mq(768px) {
+        min-height: 540px;
+    }
+
+    @include mq(992px) {
+        min-height: 600px;
+    }
+
+    @include mq(1200px) {
+        min-height: 650px;
+    }
+
+    .container {
+        display: grid;
+        place-content: center;
+
+        .hero-video--section {
+            width: 300px;
+            border-radius: 2rem;
+
+            @include mq(576px) {
+                width: 350px;
+            }
+            @include mq(768px) {
+                width: 360px;
+            }
+            @include mq(992px) {
+                width: 400px;
+            }
+            @include mq(1200px) {
+                width: 500px;
+            }
+        }
+    }
+    .custom-shape-divider-bottom-1689722567 {
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        width: 100%;
+        line-height: 0;
+        transform: rotate(180deg);
+
+        svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+
+            @include mq(375px) {
+                height: 50px;
+            }
+            @include mq(768px) {
+                height: 100px;
+            }
+            @include mq(992px) {
+                height: 120px;
+            }
+
+            .shape-fill {
+                fill: #FFFFFF;
+            }
+        }
+    }
+}

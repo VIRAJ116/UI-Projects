@@ -1,0 +1,22 @@
+:root {
+    --font_primary: 'Playfair Display', serif;
+    --font_secondary: 'Nunito', sans-serif;
+    --border-radius: 5px;
+    --white: #FFFFFF;
+    --polar-color: #E1F8F8;
+    --bluelagoon: #006F88;
+    --tradewind: #52ACAA;
+    --catskill-white: #F3F9F9;
+    --line-color: #EBEBEB;
+    --text-color: #222222;
+    --dove-gray: #666666;
+}
+ 
+$device-xs: 320px;
+$device-sm: 576px;
+$device-md: 768px;
+$tablet: 992px;
+$device-lg: 1024px;
+$device-xl: 1200px;
+$container: 1560px;
+$container-lg: 1700px;

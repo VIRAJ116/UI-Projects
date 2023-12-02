@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session-48</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="stopwatch">
+        <div class="container">
+            <div class="wrapper d-flex d-flex-col d-align-center">
+                <div class="timer d-flex d-just-center">
+                    <span class="hours" id="hour">00:&nbsp;</span>
+                    <span class="minutes" id="minute">00:&nbsp;</span>
+                    <span class="seconds" id="second">00</span>
+                </div>
+                <div class="buttons d-flex d-flex-col">
+                    <div class="btn-row d-flex">
+                        <div class="start">
+                            <input type="time" step="2" name="start-time" id="startInput">
+                        </div>
+                        <div class="end">
+                            <input type="time" step="2" name="end-time" id="endInput">
+                        </div>
+                    </div>
+                    <div class="btn-row d-flex">
+                        <button class="btn btn-primary btn-big" id="btn-start">Start</button>
+                        <button class="btn btn-primary btn-big" id="btn-capture">Capture</button>
+                    </div>
+                </div>
+                <ol class="time-lapse">
+                </ol>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/index.js"></script>
+</body>
+</html>

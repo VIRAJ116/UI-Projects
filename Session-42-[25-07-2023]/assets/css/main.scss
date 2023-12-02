@@ -1,0 +1,18 @@
+@import './lib/bootstrap/scss/bootstrap.scss';
+@import './common/fonts';
+@import './common/variable';
+@import './common/mixin';
+@import './common/button';
+@import './common/base';
+
+/* ------ header section starts --------- */
+
+@import './layouts/header';
+
+/* ------ hero section starts --------- */
+
+@import './layouts/hero';
+
+/* ------ services section starts --------- */
+
+@import './layouts/services';

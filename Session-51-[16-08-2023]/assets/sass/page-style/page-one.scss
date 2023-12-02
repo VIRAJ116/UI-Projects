@@ -1,0 +1,82 @@
+@import "../common/variable";
+@import "../common/mixin";
+@import "../common/base";
+@import "../common/helper";
+
+.main {
+  .faq_wrapper {
+    .container {
+      h2 {
+        text-transform: uppercase;
+        padding-bottom: 12px;
+        border-bottom: 1px solid var(--data-lavender-pinocchio-color);
+        margin-bottom: 30px;
+      }
+
+      .faq_one {
+        h4 {
+          margin-bottom: 20px;
+        }
+
+        .accordion_item {
+          border: 1px solid var(--data-lavender-pinocchio-color);
+          @include border-radius(5px);
+          margin-bottom: 20px;
+          cursor: pointer;
+          
+
+          .accordion-btn {
+            font-weight: 700;
+            width: 100%;
+            border: none;
+            background: none;
+            outline: none;
+            @include flexbox();
+            justify-content: space-between;
+            cursor: pointer;
+            padding: 10px 20px;
+            @include mq($device-md) {
+              padding: 20px 30px;
+            }
+
+            .accordion_title {
+              padding-right: 20px;
+            }
+
+            .accordion_title_icon {
+              i {
+                font-size: 16px;
+                @include mq($device-md) {
+                  font-size: 23px;
+                }
+              }
+
+              .fa-plus {
+                display: block;
+              }
+
+              .fa-minus {
+                display: none;
+                color: rgb(253, 53, 181);
+              }
+            }
+          }
+          .accordion-body {
+            overflow: hidden;
+            padding: 0 20px;
+            transition: max-height 1s ease-in-out, padding 1s ease-in-out;
+            @include mq($device-md) {
+              padding: 0px 30px;
+            }
+          }
+        }
+      }
+
+      .faq_two {
+        h4 {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}

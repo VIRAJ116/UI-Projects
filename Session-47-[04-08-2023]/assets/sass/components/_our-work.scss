@@ -1,0 +1,84 @@
+.our-work {
+    padding: 40px 0;
+    background-color: var(--light-color);
+    @include mq($device-md) {
+        padding: 50px 0;
+    }
+    @include mq($tablet) {
+        padding: 70px 0;
+    }
+    @include mq(1400px) {
+        padding-top: 150px;
+        padding-bottom: 130px;
+    }
+    .container {
+        h1 {
+            position: relative;
+            text-align: center;
+            padding-bottom: 18px;
+            &::after {
+                position: absolute;
+                content: '';
+                background-color: var(--cod-gray-color);
+                height: 4px;
+                width: 22.3%;
+                left: 38.9%;
+                bottom: 0;
+            }
+        }
+        .image-grid {
+            margin-top: 35px;
+            margin-bottom: 60px;
+            display: grid;
+            row-gap: 30px;
+            grid-template-columns: 1fr;
+            @include mq($device-md) {
+                margin-top: 60px;
+                grid-gap: 30px;
+                grid-template-columns: repeat(2, 1fr);
+            }
+            @include mq($tablet) {
+                margin-top: 80px;
+                grid-gap: 50px;
+                grid-template-columns: repeat(3, 1fr);
+            }
+            @include mq(1400px) {
+                margin-top: 100px;
+                grid-gap: 74px;
+            }
+            .box {
+                cursor: pointer;
+                background-color: var(--white-color);
+                text-align: -webkit-center;
+                position: relative;
+                @include transition(0.5s, ease);
+                &:hover::after {
+                    background-color: rgb(0 0 0 / 70%);
+                    position: absolute;
+                    content: 'PONY PICK';
+                    font-weight: 700;
+                    color: var(--white-color);
+                    @include font-detail(45px, 55px);
+                    @include flexbox();
+                    justify-content: center;
+                    align-items: center;
+                    z-index: 3;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                }
+                picture {
+                    display: inherit;
+                    max-width: 400px;
+                    @include mq($device-md) {
+                        max-width: 550px;
+                    }
+                }
+            }
+        }
+        .view-btn {
+            margin: 0 auto;
+        }
+    }
+}

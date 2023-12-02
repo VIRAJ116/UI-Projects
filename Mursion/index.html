@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mursion</title>
+    <link rel="stylesheet" href="tailwind.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://db.onlinewebfonts.com/c/96cea24c1dcaf763c8d2cc035c3bdcf5?family=Lyon+Display+Web+Medium+Regular"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.cdnfonts.com/css/soleil" rel="stylesheet" />
+    <link
+      href="https://db.onlinewebfonts.com/c/d5973b3327c0b9a7fb20dd4cce7d5bf5?family=LyonDisplay-Regular"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header class="bg-primaryblue">
+      <div class="header-top hidden xl:block border-b border-secondaryblue">
+        <div class="custom-container">
+          <div class="h-[44px] flex items-center justify-end">
+            <a
+              class="text-white tracking-[2px] relative after:absolute after:content-['|'] after:right-0 pr-[16px] after:text-secondaryblue"
+              href="#"
+              >LOGIN</a
+            >
+            <a class="text-white tracking-[2px] pl-[16px]" href="#">HELP</a>
+          </div>
+        </div>
+      </div>
+      <div class="header-bottom">
+        <div class="custom-container">
+          <div class="h-[80px] flex justify-between items-center">
+            <a href="#" class="max-w-[150px] sm:max-w-[205px]">
+              <img src="assets/images/logo.webp" height="41" alt="logo" />
+            </a>
+            <div class="hidden xl:flex items-center gap-[74px]">
+              <ul class="flex gap-[45px] w-full text-white">
+                <li>
+                  <a class="whitespace-nowrap font-fontbody" href="#"
+                    >Industry Solutions</a
+                  >
+                </li>
+                <li>
+                  <a class="whitespace-nowrap font-fontbody" href="#"
+                    >Platform</a
+                  >
+                </li>
+                <li>
+                  <a class="whitespace-nowrap font-fontbody" href="#"
+                    >Resources</a
+                  >
+                </li>
+                <li>
+                  <a class="whitespace-nowrap font-fontbody" href="#"
+                    >About Us</a
+                  >
+                </li>
+                <li>
+                  <a class="whitespace-nowrap font-fontbody" href="#"
+                    >Carrers</a
+                  >
+                </li>
+              </ul>
+              <a href="#" class="h-[40px] uppercase btn btn-secondary btn-small"
+                >REQUEST A DEMO</a
+              >
+            </div>
+            <i
+              class="flex xl:!hidden !font-fontAwesome text-[28px] cursor-pointer text-white fa-solid fa-bars"
+            ></i>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section
+        class="banner-section bg-primaryblue pt-[40px] md:pt-[76px] pb-[36px] md:pb-[110px] overflow-x-clip"
+      >
+        <div class="custom-container">
+          <div
+            class="banner-row flex flex-col-reverse md:flex-row justify-center items-center"
+          >
+            <div class="banner-left w-full md:w-[56%] flex flex-col">
+              <h1
+                class="mb-[27px] md:mb-[46px] font-LyonRegular tracking-[2px] max-w-[677px] text-white"
+              >
+                <span class="h1 text-primaryred">VR for EQ. </span>
+                Simulations for essential workplace skills.
+              </h1>
+              <h3
+                class="max-w-[520px] mb-[25px] tracking-[0.5px] font-LyonRegular text-white"
+              >
+                "The high-tech solution for becoming more empathetic."
+              </h3>
+              <picture class="max-w-[147px] mb-[30px] md:mb-[55px]">
+                <img
+                  height="23"
+                  src="assets/images/logo-fast-company.webp"
+                  alt="fastcompany"
+                />
+              </picture>
+              <a
+                href="#"
+                class="uppercase text-[16px] leading-[26px] btn btn-primary btn-medium"
+              >
+                TRY IT NOW
+                <i class="text-[20px] ml-[14px] icon-right-arrow"></i>
+              </a>
+            </div>
+            <div class="banner-right w-full md:w-[44%]">
+              <picture
+                class="max-w-[610px] max-h-[529px] inline-block md:translate-x-[110px]"
+              >
+                <img
+                  src="assets/images/banner-image2.webp"
+                  class="max-w-full max-h-full min-h-full min-w-full object-contain"
+                  alt="banner-image"
+                />
+              </picture>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="services-section pt-[52px] pb-[60px]">
+        <div class="custom-container">
+          <div class="services-heading text-center w-full">
+            <span
+              class="font-GTAmericaMono mb-[10px] text-[16px] text-primaryred uppercase"
+              >SERVICES</span
+            >
+            <h3
+              class="mb-[40px] font-LyonRegular mx-auto tracking-[2px] max-w-[627px]"
+            >
+              Where are your tough conversations happening?
+            </h3>
+          </div>
+          <div
+            class="services-boxes pb-[95px] flex flex-wrap mx-[-16px] gap-y-[32px]"
+          >
+            <div
+              class="service-box px-[16px] relative w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/3"
+            >
+              <div
+                class="bg-violet py-[28px] min-h-[255px] md:min-h-[295px] pr-[28px] pl-[26px]"
+              >
+                <h3 class="mb-[10px] tracking-[1px] text-white">Leadership</h3>
+                <p class="text-white mb-[14px] tracking-[1px] line-clamp-5">
+                  Unlock empathic potential through immersive practice. Support
+                  leaders as they coach employees and bring them together in
+                  unique ways.
+                </p>
+                <a
+                  href="#"
+                  class="group sm:hidden font-fontbody text-[18px] text-kovayellow leading-[28px] items-center"
+                  >Read More<i
+                    class="relative transition-all group-hover:left-[20px] text-[20px] ml-[8px] icon-right-arrow"
+                  ></i
+                ></a>
+              </div>
+              <picture
+                class="inline-block absolute max-w-[136px] bottom-[-46px] right-[-48px]"
+              >
+                <img src="assets/images/leadership-shape.webp" alt="artwork" />
+              </picture>
+            </div>
+            <div
+              class="service-box px-[16px] relative w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/3"
+            >
+              <div
+                class="bg-barleywhite py-[28px] min-h-[255px] md:min-h-[295px] pr-[28px] pl-[26px]"
+              >
+                <h3 class="mb-[10px] tracking-[0.5px] text-violet">
+                  Diversity, Equity, & Inclusion
+                </h3>
+                <p
+                  class="text-secondaryblue mb-[14px] tracking-[1px] line-clamp-4"
+                >
+                  Transform human capital into a true competitive advantage.
+                  Make diversity, equity, and inclusion a reality.
+                </p>
+                <a
+                  href="#"
+                  class="group sm:hidden font-fontbody text-[18px] text-secondaryblue leading-[28px] items-center"
+                  >Read More<i
+                    class="relative transition-all group-hover:left-[20px] text-[20px] ml-[8px] icon-right-arrow"
+                  ></i
+                ></a>
+              </div>
+            </div>
+            <div
+              class="service-box px-[16px] relative w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/3"
+            >
+              <div
+                class="bg-bayblue py-[28px] min-h-[255px] md:min-h-[295px] pr-[28px] pl-[26px]"
+              >
+                <h3 class="mb-[10px] tracking-[0.5px] text-white">
+                  Sales Training
+                </h3>
+                <p class="text-white mb-[14px] tracking-[1px] line-clamp-4">
+                  Immerse your salespeople in virtual environments where they
+                  can hone even the most advanced, consultative skill sets.
+                </p>
+                <a
+                  href="#"
+                  class="group sm:hidden font-fontbody text-[18px] text-kovayellow leading-[28px] items-center"
+                  >Read More<i
+                    class="relative transition-all group-hover:left-[20px] text-[20px] ml-[8px] icon-right-arrow"
+                  ></i
+                ></a>
+              </div>
+            </div>
+            <div
+              class="service-box px-[16px] relative w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/3"
+            >
+              <div
+                class="bg-wildsand py-[28px] min-h-[255px] md:min-h-[295px] pr-[28px] pl-[26px]"
+              >
+                <h3 class="mb-[10px] tracking-[0.5px] text-primaryred">
+                  Education
+                </h3>
+                <p
+                  class="text-secondaryblue mb-[14px] tracking-[1px] line-clamp-4"
+                >
+                  From preparation to induction to professional development, use
+                  simulations to upskill or enhance competence and self-efficacy
+                  in the classroom.
+                </p>
+                <a
+                  href="#"
+                  class="group sm:hidden font-fontbody text-[18px] text-primaryblue leading-[28px] items-center"
+                  >Read More<i
+                    class="relative transition-all group-hover:left-[20px] text-[20px] ml-[8px] icon-right-arrow"
+                  ></i
+                ></a>
+              </div>
+            </div>
+            <div
+              class="service-box px-[16px] relative w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/3"
+            >
+              <div
+                class="bg-pearulbush py-[28px] min-h-[255px] md:min-h-[295px] pr-[28px] pl-[26px]"
+              >
+                <h3 class="mb-[10px] tracking-[0.5px] text-bayblue">
+                  Healthcare
+                </h3>
+                <p
+                  class="text-secondaryblue mb-[14px] tracking-[1px] line-clamp-4"
+                >
+                  Empower practitioners to practice and master high-stakes
+                  conversations for improved confidence, compliance, and impact.
+                </p>
+                <a
+                  href="#"
+                  class="group sm:hidden font-fontbody text-[18px] text-bayblue leading-[28px] items-center"
+                  >Read More<i
+                    class="relative transition-all group-hover:left-[20px] text-[20px] ml-[8px] icon-right-arrow"
+                  ></i
+                ></a>
+                <picture
+                  class="inline-block absolute max-w-[117px] bottom-[-48px] right-[-10px]"
+                >
+                  <img
+                    src="assets/images/healthcare-shape.webp"
+                    alt="artwork"
+                  />
+                </picture>
+              </div>
+            </div>
+            <div
+              class="service-box px-[16px] relative w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/3"
+            >
+              <div
+                class="bg-elephant py-[28px] min-h-[255px] md:min-h-[295px] pr-[28px] pl-[26px]"
+              >
+                <h3 class="mb-[10px] tracking-[0.5px] text-clamshell">
+                  Customer Service Training
+                </h3>
+                <p class="text-wildsand mb-[14px] tracking-[1px] line-clamp-4">
+                  Transform human interaction into memorable brand experiences
+                  for your customers and repeat business for your organization.
+                </p>
+                <a
+                  href="#"
+                  class="group sm:hidden font-fontbody text-[18px] text-azalea leading-[28px items-center"
+                  >Read More<i
+                    class="relative transition-all group-hover:left-[20px] text-[20px] ml-[8px] icon-right-arrow"
+                  ></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <a
+            href="#"
+            class="h-[40px] md:h-[50px] mx-auto tracking-[0.5px] uppercase leading-[26px] btn btn-secondary btn-big text-[16px]"
+          >
+            See all case studies
+            <i class="text-[20px] ml-[14px] icon-right-arrow"></i>
+          </a>
+        </div>
+      </section>
+
+      <section class="bg-wildsand press-section pt-[84px] pb-[107px]">
+        <div class="custom-container">
+          <div
+            class="press-heading mb-[58px] relative w-full flex items-center justify-center"
+          >
+            <h2 class="text-elephant">In the Press</h2>
+            <picture
+              class="inline-block absolute max-w-[108px] bottom-[-10px] left-[51%]"
+            >
+              <img
+                src="assets/images/h-bottom.webp"
+                height="14"
+                alt="artwork"
+              />
+            </picture>
+          </div>
+          <div
+            class="press-row flex flex-wrap pb-[70px] mx-[-15px] gap-y-[38px]"
+          >
+            <div
+              class="press-card"
+            >
+              <div
+                class="press-card-inner"
+              >
+                <picture class="press-logo max-w-[199px] inline-block mb-[20px]">
+                  <img
+                    class="h-[45px] object-contain"
+                    src="assets/images/fastcompany.webp"
+                    alt="fastcompany"
+                  />
+                </picture>
+                <p
+                  class="press-card-text text-elephant font-LyonRegular text-[24px] mb-[10px] leading-[28px] tracking-[1px] line-clamp-4"
+                >
+                  The high-tech solution to becoming more empathetic in less
+                  than an hour
+                </p>
+                <a
+                  href="#"
+                  class="read-btn group/move sm:opacity-0 sm:invisible sm:pointer-events-none flex transition-all duration-500 sm:group-hover:opacity-100 sm:group-hover:visible sm:group-hover:pointer-events-auto font-fontbody text-[18px] text-primaryred leading-[28px] items-center"
+                  >Read More<i
+                    class="relative transition-all group-hover/move:left-[20px] sm:hidden text-[20px] ml-[8px] icon-right-arrow"
+                  ></i
+                ></a>
+                <picture
+                  class="bottom-arrow-img hidden transition-all duration-500 sm:group-hover:inline-block absolute max-w-[88px] bottom-[-2px] right-[-7px]"
+                >
+                  <img
+                    src="assets/images/bottom-arrow.webp"
+                    height="88"
+                    alt="arrow"
+                  />
+                </picture>
+              </div>
+            </div>
+            <div
+              class="px-[15px] relative w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/3"
+            >
+              <div
+                class="bg-wildsand group hover:bg-kovayellow transition-all duration-500 border-[1px] border-iron pt-[30px] min-h-[236px] pb-[14px] px-[36px]"
+              >
+                <picture class="max-w-[120px] inline-block mb-[20px]">
+                  <img
+                    class="h-[45px] object-contain"
+                    src="assets/images/fortune.webp"
+                    alt="fortune"
+                  />
+                </picture>
+                <p
+                  class="text-elephant font-LyonRegular text-[24px] mb-[10px] leading-[28px] tracking-[1px] line-clamp-4"
+                >
+                  This new VR simulator helps you prepare for the most awkward
+                  office encounters
+                </p>
+                <a
+                  href="#"
+                  class="hopacity-0 invisible pointer-events-none flex transition-all duration-500 sm:group-hover:opacity-100 sm:group-hover:visible sm:group-hover:pointer-events-auto font-fontbody text-[18px] text-primaryred leading-[28px] items-center"
+                  >Read More<i
+                    class="sm:hidden text-[20px] ml-[8px] icon-right-arrow"
+                  ></i
+                ></a>
+                <picture
+                  class="hidden transition-all duration-500 sm:group-hover:inline-block absolute max-w-[88px] bottom-[-2px] right-[-7px]"
+                >
+                  <img
+                    src="assets/images/bottom-arrow.webp"
+                    height="88"
+                    alt="arrow"
+                  />
+                </picture>
+              </div>
+            </div>
+            <div
+              class="px-[15px] relative w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/3"
+            >
+              <div
+                class="bg-wildsand group hover:bg-kovayellow transition-all duration-500 border-[1px] border-iron pt-[30px] min-h-[236px] pb-[14px] px-[36px]"
+              >
+                <picture class="max-w-[138px] inline-block mb-[20px]">
+                  <img
+                    class="object-contain h-[45px]"
+                    src="assets/images/edsurge.webp"
+                    alt="edsurge"
+                  />
+                </picture>
+                <p
+                  class="text-elephant font-LyonRegular text-[24px] mb-[10px] leading-[28px] tracking-[1px] line-clamp-4"
+                >
+                  Blending VR with Live Actors for a Fresh Twist on PD
+                </p>
+                <a
+                  href="#"
+                  class="opacity-0 invisible pointer-events-none flex transition-all duration-500 sm:group-hover:opacity-100 sm:group-hover:visible sm:group-hover:pointer-events-auto font-fontbody text-[18px] text-primaryred leading-[28px] items-center"
+                  >Read More<i
+                    class="sm:hidden text-[20px] ml-[8px] icon-right-arrow"
+                  ></i
+                ></a>
+                <picture
+                  class="hidden transition-all duration-500 sm:group-hover:inline-block absolute max-w-[88px] bottom-[-2px] right-[-7px]"
+                >
+                  <img
+                    src="assets/images/bottom-arrow.webp"
+                    height="88"
+                    alt="arrow"
+                  />
+                </picture>
+              </div>
+            </div>
+            <div
+              class="px-[15px] relative w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/3"
+            >
+              <div
+                class="bg-wildsand group hover:bg-kovayellow transition-all duration-500 border-[1px] border-iron pt-[30px] min-h-[236px] pb-[14px] px-[36px]"
+              >
+                <picture class="max-w-[174px] inline-block mb-[20px]">
+                  <img
+                    class="object-contain h-[45px]"
+                    src="assets/images/techcrunch.webp"
+                    alt="techcrunch"
+                  />
+                </picture>
+                <p
+                  class="text-elephant font-LyonRegular text-[24px] mb-[10px] leading-[28px] tracking-[1px] line-clamp-4"
+                >
+                  Empathy technologies like VR, AR and social media can
+                  transform education
+                </p>
+                <a
+                  href="#"
+                  class="opacity-0 invisible pointer-events-none flex transition-all duration-500 sm:group-hover:opacity-100 sm:group-hover:visible sm:group-hover:pointer-events-auto font-fontbody text-[18px] text-primaryred leading-[28px] items-center"
+                  >Read More<i
+                    class="sm:hidden text-[20px] ml-[8px] icon-right-arrow"
+                  ></i
+                ></a>
+                <picture
+                  class="hidden transition-all duration-500 sm:group-hover:inline-block absolute max-w-[88px] bottom-[-2px] right-[-7px]"
+                >
+                  <img
+                    src="assets/images/bottom-arrow.webp"
+                    height="88"
+                    alt="arrow"
+                  />
+                </picture>
+              </div>
+            </div>
+            <div
+              class="px-[15px] relative w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/3"
+            >
+              <div
+                class="bg-wildsand group hover:bg-kovayellow transition-all duration-500 border-[1px] border-iron pt-[30px] min-h-[236px] pb-[14px] px-[36px]"
+              >
+                <picture class="max-w-[61px] inline-block mb-[20px]">
+                  <img
+                    class="object-contain h-[45px]"
+                    src="assets/images/cnbc-logo.webp"
+                    alt="cnbc-logo"
+                  />
+                </picture>
+                <p
+                  class="text-elephant font-LyonRegular text-[24px] mb-[10px] leading-[28px] tracking-[1px] line-clamp-4"
+                >
+                  How Companies Are Using VR to Develop Employees' Soft Skills
+                </p>
+                <a
+                  href="#"
+                  class="opacity-0 invisible pointer-events-none flex transition-all duration-500 sm:group-hover:opacity-100 sm:group-hover:visible sm:group-hover:pointer-events-auto font-fontbody text-[18px] text-primaryred leading-[28px] items-center"
+                  >Read More<i
+                    class="sm:hidden text-[20px] ml-[8px] icon-right-arrow"
+                  ></i
+                ></a>
+                <picture
+                  class="hidden transition-all duration-500 sm:group-hover:inline-block absolute max-w-[88px] bottom-[-2px] right-[-7px]"
+                >
+                  <img
+                    src="assets/images/bottom-arrow.webp"
+                    height="88"
+                    alt="arrow"
+                  />
+                </picture>
+              </div>
+            </div>
+            <div
+              class="px-[15px] relative w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/3"
+            >
+              <div
+                class="bg-wildsand group hover:bg-kovayellow transition-all duration-500 border-[1px] border-iron pt-[30px] min-h-[236px] pb-[14px] px-[36px]"
+              >
+                <picture class="max-w-[217px] inline-block mb-[20px]">
+                  <img
+                    class="object-contain h-[45px]"
+                    src="assets/images/yahoofinance.webp"
+                    alt="yahoo"
+                  />
+                </picture>
+                <p
+                  class="text-elephant font-LyonRegular text-[24px] mb-[10px] leading-[28px] tracking-[1px] line-clamp-4"
+                >
+                  Mursion Announces Series B Funding Round Led by Leeds
+                  Illuminate
+                </p>
+                <a
+                  href="#"
+                  class="opacity-0 invisible pointer-events-none flex transition-all duration-500 sm:group-hover:opacity-100 sm:group-hover:visible sm:group-hover:pointer-events-auto font-fontbody text-[18px] text-primaryred leading-[28px] items-center"
+                  >Read More<i
+                    class="sm:hidden text-[20px] ml-[8px] icon-right-arrow"
+                  ></i
+                ></a>
+                <picture
+                  class="hidden transition-all duration-500 sm:group-hover:inline-block absolute max-w-[88px] bottom-[-2px] right-[-7px]"
+                >
+                  <img
+                    src="assets/images/bottom-arrow.webp"
+                    height="88"
+                    alt="arrow"
+                  />
+                </picture>
+              </div>
+            </div>
+          </div>
+          <a
+            href="#"
+            class="uppercase btn btn-secondary btn-medium h-[40px] md:h-[50px] mx-auto"
+            >Read More <i class="ml-[14px] text-[20px] icon-right-arrow"></i
+          ></a>
+        </div>
+      </section>
+    </main>
+    <script src="./tailwind.config.js"></script>
+  </body>
+</html>

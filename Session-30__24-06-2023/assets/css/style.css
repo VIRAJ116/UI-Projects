@@ -1,0 +1,131 @@
+.grid-layout {
+    margin: 0 auto;
+}
+
+.grid-layout .container {
+    display: grid;
+    height: 600px;
+    width: 600px;
+    grid-template-columns: repeat(12, auto);
+    grid-template-rows: repeat(6, auto);
+    padding: 0 30px;
+    gap: 16px;
+    margin: 0 auto;
+}
+
+.grid-layout > .container > .item {
+    background: black;
+    color: white;
+}
+
+.grid-layout .item1 {
+    grid-column: 1 / span 8;
+    grid-row: 1 / span 2;
+}
+
+.grid-layout .item2 {
+    grid-column: 9 / span 4;
+    grid-row: 1 / span 3;
+}
+
+.grid-layout .item3 {
+    grid-column: 1 / span 6;
+    grid-row: 3 /span 4;
+}
+
+.grid-layout .item4 {
+    grid-column: 7 / span 2;
+    grid-row: 3 / span 1;
+}
+
+.grid-layout .item5 {
+    grid-column: 7 / span 6;
+    grid-row: 4 / span 2;
+}
+
+.grid-layout .item6 {
+    grid-column: 7 / span 2;
+}
+
+.grid-layout .item7 {
+    grid-column: 9 / span 2;
+}
+
+.grid-layout .item8 {
+    grid-column: 11 / span 2;
+}
+
+.grid-layout-two {
+    margin: 50px auto;
+}
+
+.grid-layout-two .container {
+    display: grid;
+    margin: 0 auto;
+    max-width: 466px;
+    min-height: 600px;
+    padding: 22px 16px;
+    grid-template-columns: repeat(12, auto);
+    grid-template-rows: repeat(18, auto);
+    gap: 5px;
+}
+
+.box {
+    background: #bec4c6;
+    color: white;
+}
+
+.box1 {
+    grid-row: 3 / span 5;
+    grid-column: 2 / span 3;
+}
+
+.box2 {
+    grid-column: 5 / span 4;
+    grid-row: 1 / span 4;
+}
+
+.box3 {
+    grid-row: 2 / span 4;
+    grid-column: 9 / span 2;
+}
+
+.box4 {
+    grid-column: 1 / span 4;
+    grid-row: 8 / span 4;
+}
+
+.box5 {
+    grid-column: 5 / span 4;
+    grid-row: 5 / span 7;
+}
+
+.box6 {
+    grid-column: 9 / span 3;
+    grid-row: 6 / span 4;
+}
+
+.box7 {
+    grid-column: 3 / span 4;
+    grid-row: 12 / span 5;
+}
+
+.box8 {
+    grid-column: 7 / span 2;
+    grid-row: 12 / span 3;
+}
+
+.box9 {
+    grid-column: 9 / span 4;
+    grid-row: 10 / span 4;
+}
+
+.box10 {
+    grid-column: 7 / span 2;
+    grid-row: 15 / span 4;
+}
+
+.box11 {
+    grid-column: 9 / span 3;
+    grid-row: 14 / span 2;
+}

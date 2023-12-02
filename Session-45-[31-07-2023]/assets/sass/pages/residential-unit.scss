@@ -1,0 +1,97 @@
+@import '../common/variable';
+@import '../common/base';
+@import '../common/mixin';
+@import '../components/header';
+@import '../components/breadcrumb';
+@import '../components/footer';
+
+.btn-secondary {
+    width: 160px;
+}
+
+.breadcrumb {
+    padding-bottom: 14px;
+}
+
+.products-section {
+    .container {
+        .products {
+            position: relative;
+            padding: 34px 0 20px 0;
+            @include mq($device-md) {
+                padding: 60px 0 20px 0;
+            }
+            &:not(:last-child)::after {
+                position: absolute;
+                content: '';
+                background-color: var(--line-color);
+                height: 1px;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
+            .row {
+                @include row;
+            .product-view {
+                width: 100%;
+                min-height: 350px;
+                border-top-right-radius: 150px;
+                background-color: var(--catskill-white);
+                @include mq($device-md) {
+                    width: 83.4%;
+                    min-height: 450px;
+                }
+                picture {
+                    display: inherit;
+                    max-width: 207px;
+                    img {
+                        object-fit: cover;
+                    }
+                }
+            }
+            .product-detail {
+                width: 100%;
+                .product-title {
+                    position: relative;
+                    h5 {
+                        margin-bottom: 10px;
+                        @include mq($device-md) {
+                            margin-bottom: 29px;
+                        }
+                    }
+                    span {
+                        margin-bottom: 20px;
+                        color: var(--dove-gray);
+                    }
+                    &::after {
+                        position: absolute;
+                        content: '';
+                        height: 1px;
+                        background-color: var(--line-color);
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                    }
+                }
+                .product-description {
+                    padding-top: 20px;
+                    p {
+                        letter-spacing: 0.51px;
+                        margin-bottom: 20px;
+                        &:last-child {
+                            margin-bottom: 30px;
+                        }
+                    }
+                }
+                .btn {
+                    min-height: 55px;
+                    @include flexCenter();
+                    &:hover {
+                        border-color: var(--bluelagoon);
+                    }
+                }
+            }
+            }
+        }
+    }
+}

@@ -1,0 +1,104 @@
+footer {
+    height: 160px;
+    .container {
+        height: 100%;
+        .footer-wrapper {
+            flex-wrap: wrap;
+            height: 100%;
+            .nav-lists {
+                padding-top: 10px;
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+                @include mq($device-md) {
+                    padding-top: 0;
+                    width: 50%;
+                    justify-content: flex-start;
+                }
+                @include mq(1400px) {
+                    width: 24.45%;
+                }
+                li {
+                    &:not(:last-child) {
+                        margin-right: 20px;
+                        @include mq($device-sm) {
+                            margin-right: 40px;
+                        }
+                        @include mq($tablet) {
+                            margin-right: 80px;
+                        }
+                    }
+                    a {
+                        text-transform: uppercase;
+                        font-weight: 600;
+                        font-size: 14px;
+                        @include transition(0.3s);
+                        @include mq($device-sm) {
+                            font-size: 18px;
+                        }
+                        &:hover {
+                            color: var(--red-color);
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+            span {
+                width: 100%;
+                @include font-detail(14px, 18px);
+                color: #4B5059;
+                text-align: center;
+                @include mq($device-md) {
+                    text-align: right;
+                    width: 50%;
+                }
+                @include mq(1400px){
+                    text-align: center;
+                    width: 24.45%;
+                }
+            }
+            .social-icons {
+                width: 100%;
+                justify-content: center;
+                @include mq(1400px) {
+                    justify-content: flex-end;
+                    width: 24.45%;
+                }
+                >li {
+                    >a {
+                        >i {
+                            font-size: 18px;
+                            @include mq($device-sm) {
+                                font-size: 23px;
+                            }
+                            &:hover {
+                                color: var(--red-color);
+                            }
+                        }
+                        .fa-instagram {
+                            font-size: 22px;
+                            @include mq($device-sm) {
+                                font-size: 28px;
+                            }
+                        }
+                        .fa-pinterest-p {
+                            font-size: 20px;
+                            @include mq($device-sm) {
+                                font-size: 24px;
+                            }
+                        }
+                        .fa-linkedin-in {
+                            font-size: 20px;
+                            @include mq($device-sm) {
+                                font-size: 24px;
+                            }
+                        }
+                    }
+                    &:not(:last-child) {
+                        margin-right: 25px;
+                    }
+                }
+            }
+        }
+    }
+}

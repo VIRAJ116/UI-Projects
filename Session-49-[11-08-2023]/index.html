@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session-49</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="assets/sass/library/datepicker-bs.css">
+    <script src="https://kit.fontawesome.com/97c281afd5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <main>
+        <section class="book-video">
+            <div class="container">
+                <div class="wrapper">
+                    <h3>Book Video Meet</h3>
+                    <div class="boxes">
+                        <div class="time-box d-flex d-just-center">
+                            <input type="checkbox" id="booker" name="time" class="check-input" checked>
+                            <label for="booker">Amber Heard</label>
+                        </div>
+                        <div class="time-box booked d-flex d-just-center">
+                            <input type="checkbox" id="book" name="time" class="check-input">
+                            <label for="book">Book Details</label>
+                        </div>
+                        <div class="time-box border-dash d-flex d-just-center">
+                            <input type="checkbox" id="payment" name="time" class="check-input">
+                            <label for="payment">Payment</label>
+                        </div>
+                    </div>
+                    <div class="notification d-flex d-flex-col d-just-btwn">
+                        <div class="left-wrap d-flex d-flex-col">
+                            <span class="video-icon">
+                                <i class="fa-solid fa-video"></i>
+                            </span>
+                            <span class="medium">New Request Of Video Meet With <span class="bold">Amber Heard</span></span>
+                        </div>
+                        <span class="price bold">$50</span>
+                    </div>
+                    <div class="video-duration">
+                        <span class="duration-title">Video Meet Duration</span>
+                        <span class="duration-time bold">10 Minutes</span>
+                    </div>
+                    <div class="features">
+                        <span class="feature-title bold">Video Meet Features</span>
+                        <ul class="feature-list">
+                            <li>Video Meet</li>
+                            <li>Get 3 minutes to talk about anything</li>
+                            <li>Snap a photo together</li>
+                        </ul>
+                    </div>
+                    <div class="date-time">
+                        <div class="date-slot">
+                            <span class="bold">Select A Date</span>
+                            <div class="calender">
+                                <div id="inline" data-date="08/22/2023"></div>
+                            </div>
+                            <div class="buttons d-flex">
+                                <a class="btn btn-small btn-primary">
+                                    Buy Gift Card
+                                </a>
+                                <a class="btn btn-medium btn-primary">
+                                    Redeem Gift
+                                </a>
+                            </div>
+                        </div>
+                        <div class="time-slot">
+                            <span class="time-slot-head bold">Pick A Time Slot</span>
+                            <div class="time-box-wrap">
+                                <div class="time-box d-flex d-align-center">
+                                    <input type="checkbox" id="time1" name="time" class="time-checkbox">
+                                    <label for="time1">08:10 PM To 08:20 PM</label>
+                                </div>
+                                <div class="time-box d-flex d-align-center">
+                                    <input type="checkbox" id="time2" name="time" class="time-checkbox">
+                                    <label for="time2">08:20 PM To 08:30 PM</label>
+                                </div>
+                                <div class="time-box d-flex d-align-center">
+                                    <input type="checkbox" id="time3" name="time" class="time-checkbox">
+                                    <label for="time3">08:30 PM To 08:40 PM</label>
+                                </div>
+                                <div class="time-box d-flex d-align-center">
+                                    <input type="checkbox" id="time4" name="time" class="time-checkbox">
+                                    <label for="time4">08:40 PM To 08:50 PM</label>
+                                </div>
+                                <div class="time-box d-flex d-align-center">
+                                    <input type="checkbox" id="time5" name="time" class="time-checkbox">
+                                    <label for="time5">08:50 PM To 09:00 PM</label>
+                                </div>
+                                <div class="time-box d-flex d-align-center">
+                                    <input type="checkbox" id="time6" name="time" class="time-checkbox">
+                                    <label for="time6">09:00 PM To 09:10 PM</label>
+                                </div>
+                            </div>
+                            <a id="makePaymentBtn" class="btn btn-primary btn-big" role="button">Make Payment</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="assets/js/datepicker-full.js"></script>
+    <script src="assets/js/index.js"></script>
+</body>
+</html>

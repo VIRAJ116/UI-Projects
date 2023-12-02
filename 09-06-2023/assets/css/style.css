@@ -1,0 +1,492 @@
+/* Reset css starts */
+
+html, body, ul, i, li, form, header, section, div, p, h5, h4, h2, h1, span, ol, button, img, picture, table, th, thead, tbody, tr, td {
+    margin: 0;
+    padding: 0;
+}
+
+ul, ol, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Reset css ends */
+
+/* icon css starts */
+
+@font-face {
+    font-family: 'icomoon';
+    src:  url('/assets/fonts/icomoon.eot?je34lu');
+    src:  url('/assets/fonts/icomoon.eot?je34lu#iefix') format('embedded-opentype'),
+      url('/assets/fonts/icomoon.ttf?je34lu') format('truetype'),
+      url('/assets/fonts/icomoon.woff?je34lu') format('woff'),
+      url('/assets/fonts/icomoon.svg?je34lu#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-search:before {
+    content: "\e986";
+  }
+  .icon-facebook:before {
+    content: "\ea90";
+  }
+  .icon-instagram:before {
+    content: "\ea92";
+  }
+  .icon-whatsapp:before {
+    content: "\ea93";
+  }
+  .icon-telegram:before {
+    content: "\ea95";
+  }
+  .icon-twitter:before {
+    content: "\ea96";
+  }
+  
+  @font-face {
+    font-family: 'Myriad Pro';
+    src: url('/assets/fonts/MyriadPro-Regular.eot');
+    src: url('/assets/fonts/MyriadPro-Regular.eot?#iefix') format('embedded-opentype'),
+        url('/assets/fonts/MyriadPro-Regular.woff2') format('woff2'),
+        url('/assets/fonts/MyriadPro-Regular.woff') format('woff'),
+        url('/assets/fonts/MyriadPro-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* icon css ends  */
+
+/* common css starts */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1950px;
+}
+
+body {
+    color: black;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.clearfix::before,
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+h1, p , h2, h3, h5 {
+    line-height: 1;
+}
+
+h2 {
+    text-align: center;
+    font-size: 44px;
+    font-weight: bold;
+    color: #506a85;
+}
+
+img {
+    max-width: 100%;
+}
+
+.btn {
+    display: inline-block;
+    cursor: pointer;
+    background-color: #00bc9c;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    border: 2px solid white;
+    border-radius: 3px;
+}
+
+.icon-instagram:hover {
+    background: linear-gradient(
+        45deg,
+        #f09433 0%,
+        #e6683c 25%,
+        #dc2743 50%,
+        #cc2366 75%,
+        #bc1888 100%
+      );
+}
+
+.icon-facebook:hover {
+    background: linear-gradient(
+        45deg,
+        #33baf0 0%,
+        #1823bc 25%,
+        #1823bc 50%,
+        #1823bc 75%,
+        #1823bc 100%
+      );
+}
+
+.icon-twitter:hover {
+    background: linear-gradient(
+        45deg,
+        #33baf0 0%,
+        #1896bc 25%,
+        #1880bc 50%,
+        #1888bc 75%,
+        #187abc 100%
+      );
+}
+
+.icon-whatsapp:hover {
+    background: linear-gradient(
+        45deg,
+        #9ef033 0%,
+        #379113 25%,
+        #0d6b0d 50%,
+        #2d791e 75%,
+        #1c8a1c 100%
+      );
+}
+
+/* common css ends */
+
+/* custom css starts  */
+
+.header-section {
+    padding: 190px 0 225px 0;
+    background-color: #f4c457;
+}
+
+.header-section .container {
+    position: relative;
+}
+
+.header-section .container::after {
+    content: '';
+    background: url('../images/htop.png');
+    position: absolute;
+    z-index: 3;
+    top: -275px;
+    left: 42%;
+    width: 238px;
+    height: 251px;
+}
+
+.header-logo {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 70px;
+}
+
+.header-lists {
+    float: right;
+}
+
+.header-lists li {
+    font-family: 'Rubik', sans-serif;
+    font-size: 32px;
+    line-height: 54px;
+}
+
+.heaedr-lists li strong {
+    font-family: 'Rubik', sans-serif;
+    font-size: 32px;
+}
+
+table {
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+
+.table-section {
+    padding-top: 150px;
+}
+
+.table-section .container {
+    position: relative;
+}
+
+.table-section .container::before {
+    content: '';
+    position: absolute;
+    background: url('../images/footprint.png');
+    right: 100px;
+    top: -210px;
+    z-index: -1;
+    height: 296px;
+    width: 235px;
+}
+
+.table-section h1 {
+    text-align: center;
+    font-size: 168px;
+    color: #002c1e;
+    padding-bottom: 125px;
+    font-family: 'Dela Gothic One', cursive;
+}
+
+.invoice-table > thead tr th:first-child {
+    text-align: center;
+    padding: 10px 85px 20px 45px;
+}
+
+.invoice-table > tbody tr td:first-child {
+    text-align: center;
+    padding: 0 85px 0 20px;
+}
+
+.invoice-table > thead tr th:last-child {
+    text-align: center;
+}
+
+.invoice-table > tbody tr td:first-child {
+    text-align: center;
+}
+
+.invoice-table > thead tr th:last-child {
+    text-align: center;
+    padding: 0 40px 0 0px;
+}
+
+.invoice-table > tbody tr td:last-child {
+    text-align: center;
+    padding: 0 40px 0 0px;
+}
+
+.invoice-table > tbody::after {
+    line-height:4em;
+    content:".";
+    color:white;
+    display:block;
+}
+
+
+.invoice-table > thead {
+    background-color: #002c1e;
+}
+
+.invoice-table > thead tr > th{
+    color: white;
+    font-size: 36px;
+    line-height: 75px;
+    font-family: 'Dela Gothic One', cursive;
+}
+
+th:first-child {
+    border-top-left-radius: 60px; 
+    border-bottom-left-radius: 60px;
+}
+th:last-child {
+    border-bottom-right-radius: 60px; 
+    border-top-right-radius: 60px; 
+} 
+
+tbody tr > td {
+    font-family: 'Rubik', sans-serif;
+    font-size: 36px;
+    line-height: 108px;
+}
+
+.invoice-table > tbody tr:nth-child(even) {
+    background-color: #f4c457;
+}
+
+.invoice-table > tbody tr:nth-child(even) td:first-child {
+    border-top-left-radius: 60px; 
+    border-bottom-left-radius: 60px;
+}
+
+.invoice-table >tbody tr:nth-child(even) td:last-child {
+    border-bottom-right-radius: 60px; 
+    border-top-right-radius: 60px;
+}
+
+.invoice-table > tbody tr td:last-child {
+    font-weight: bold
+}
+
+.invoice-table > tbody tr:hover {
+    border-radius: 60px;
+    box-shadow: 6px 11px 42.33px 8.67px rgba(0, 0, 0, 0.8);
+}
+
+tfoot tr td[colspan="3"] {
+    position: relative;
+    z-index: -2;
+    background-color: #002c1e;
+    text-align: left;
+    padding-left: 360px;
+    border-top-left-radius: 200px;
+    border-bottom-left-radius: 200px;
+}
+
+tfoot tr td[colspan="2"] {
+    position: relative;
+}
+
+.table-section {
+    position: relative;
+}
+
+.table-section::after {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -1;
+    height: 324px;
+    bottom: 0px;
+    width: 48%;
+    right: 0;
+    border-top-left-radius: 200px;
+    border-bottom-left-radius: 200px;
+    background-color: #f4c457;
+}
+
+.invoice-table tfoot .tfoot-tab1 thead tr th:first-child {
+    color: white;
+    /* font-family: 'Myriad Pro'; */
+    text-transform: capitalize;
+    font-size: 28px;
+    padding-bottom: 40px;
+    text-align: left;
+}
+
+.invoice-table tfoot .tfoot-tab1 tbody tr td:first-child {
+    /* font-family: 'Myriad Pro'; */
+    border-collapse: collapse;
+    text-transform: capitalize;
+    font-size: 28px;
+    color: white;
+    text-align: left;
+    line-height: 50px;  
+}
+
+.invoice-table tfoot .tfoot-tab2 tbody tr td:first-child {
+    font-family: 'Rubik', sans-serif;
+    color: #002c1e;
+    font-weight: 900;
+    text-align: left;
+    line-height: 10px;
+}
+
+.invoice-table tfoot .tfoot-tab2 tbody tr td:last-child {
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 90px;
+}
+
+tfoot tr td[colspan="2"]::before {
+    content: '';
+    display: block;
+    width: 180px;
+    position: absolute;
+    border-top-left-radius: 200px;
+    border-bottom-left-radius: 200px;
+    z-index: 3;
+    top: 0;
+    bottom: 0;
+    left: -180px;
+    background-color: #f4c457;
+}
+
+.terms-section {
+    padding: 120px 0 200px 0;
+}
+
+.terms-section h4 {
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    font-size: 28px;
+    line-height: 38px;
+    font-weight: bold;
+}
+
+.terms-section p {
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    padding: 0 420px;
+    font-size: 28px;
+    line-height: 38px;
+}
+
+footer {
+    overflow: hidden;
+    float: left;
+    width: 100%;
+    /* padding-bottom: 350px; */
+}
+
+footer .container::after {      
+    content: '';
+    position: relative;
+    background: url('../images/flogo.png');
+    left: 25%;
+    bottom: 0;
+    height: 380px;
+    width: 778px;
+}
+
+.social-icons {
+    float: left;
+}
+
+.social-icons a {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.social-icons a i {
+    display: inline-block;
+    vertical-align: middle;
+    color: black;
+    font-size: 30px;
+    height: 57px;
+    width: 57px;
+    padding: 13px 12px 14px 14px;
+    border-radius: 50%;
+    color: white;
+    background-color: #002c1e;
+}
+
+.social-icons a:not(:last-child) {
+    margin-right: 30px;
+}
+
+.email {
+    float: right;
+}
+
+.email a {
+    font-family: 'Dela Gothic One', cursive;
+    font-weight: 400;
+    font-size: 38px;
+    color: #002c1e;
+}
